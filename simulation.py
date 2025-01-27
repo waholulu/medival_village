@@ -256,16 +256,23 @@ class World:
                 if terrain == "forest":
                     lvl = 5
                 elif terrain == "field":
-                    lvl = 3
+                    lvl = 1  # Fields start 1, requiring Spring planting
                 else:
                     lvl = 0
                 row.append(Tile(terrain, lvl))
             grid.append(row)
-        # Example farmland ownership
-        # Make tile(2,2) private for villager_id=1
-        if self.height > 2 and self.width > 2:
-            grid[2][2].owner_id = 1
-            grid[2][2].terrain_type = "field"
+        # Assign farmland to all farmers
+        farmer_count = self.config["NUM_FARMERS"]
+        current_farmer = 1
+        for y in range(2, min(2 + farmer_count, self.height)):
+            if current_farmer > farmer_count:
+                break
+            tile = grid[y][2]
+            tile.owner_id = current_farmer
+            tile.terrain_type = "field"
+            tile.resource_level = 5  # Start with fertile soil
+            current_farmer += 1
+            
         return grid
 
     def world_part_of_day(self):
@@ -450,18 +457,33 @@ class Villager:
         if tile is None:
             self.forage()
             return
-
-        if self.get_tool_count("hoe") > 0:
-            amount = self.world.config["BASE_FARM_YIELD"]
-            self.degrade_tool("hoe")
-        else:
-            amount = self.world.config["FALLBACK_FARM_YIELD"]
-
-        self.inventory["food"] = self.inventory.get("food", 0) + amount
-        tile.resource_level = max(tile.resource_level - 1, 0)
-        log_action(self.world.day_count, self.world_part_of_day(),
-                   self.id, self.role,
-                   f"Farming => +{amount} food (tile resource now={tile.resource_level}).")
+        
+        season = self.world.get_current_season()
+        
+        if season == "Autumn":  # Harvest only in autumn
+            if self.get_tool_count("hoe") > 0:
+                amount = tile.resource_level  # Harvest accumulated value
+                self.degrade_tool("hoe")
+            else:
+                amount = tile.resource_level // 2  # Reduced yield without tool
+                
+            self.inventory["food"] += amount
+            log_action(self.world.day_count, self.world_part_of_day(),
+                       self.id, self.role,
+                       f"Harvested {amount} food (tile resource now={tile.resource_level}).")
+            tile.resource_level = 0  # Reset after harvest
+            
+        elif season in ["Spring", "Summer"]:  # Prepare fields
+            tile.resource_level += 2
+            log_action(self.world.day_count, self.world_part_of_day(),
+                       self.id, self.role,
+                       f"Prepared fields (resource now {tile.resource_level}).")
+            
+        elif season == "Winter":
+            log_action(self.world.day_count, self.world_part_of_day(),
+                       self.id, self.role,
+                       "Cannot farm in winter.")
+            self.forage()
 
     def hunt(self):
         tile = self.find_tile_with_resources("forest")

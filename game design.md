@@ -76,7 +76,7 @@ This simulation models a **small medieval village**. The core elements include:
 8. **Simulation & Logging**  
    - **Core** simulation (headless) updates villagers, the world, and the market each partial-day cycle.  
    - **Logs** record each villager's actions, transactions, tool usage, resource changes, and random events.  
-   - Optional **plotting** (Plotly) at the simulation’s end to visualize resources, villager status, and key metrics over time.
+   - Optional **plotting** (Plotly) at the simulation's end to visualize resources, villager status, and key metrics over time.
 
 ---
 
@@ -114,10 +114,10 @@ This simulation models a **small medieval village**. The core elements include:
      - **Logging**: Gathering wood from forest tiles.  
      - **Crafting**: Blacksmith forging tools, consuming wood/ore.  
      - If the correct tool is available, produce maximum yield or get maximum effect.  
-     - If the tool is broken or missing, produce a reduced “fallback” yield/effect.  
+     - If the tool is broken or missing, produce a reduced "fallback" yield/effect.  
      - Reduce tool durability by 1 if used.  
   4. **Sell Surplus**: If inventory for food/wood exceeds a threshold (e.g., >5).  
-  5. **Night & Winter**: Burn wood if it’s winter and night to avoid health/happiness penalties.  
+  5. **Night & Winter**: Burn wood if it's winter and night to avoid health/happiness penalties.  
   6. **Update Status**: Decrement hunger/rest, log actions, handle health/happiness changes based on events or resource availability.
 
 ### **3.3 Simulation**
@@ -132,7 +132,7 @@ This simulation models a **small medieval village**. The core elements include:
   - Each partial-day step records villager actions, Market buys/sells, storms, tool breakages.  
   - Optionally print to console or store in a text file for later review.
 - **Plotting** (Optional, e.g., Plotly):  
-  - At the simulation’s end, generate charts that visualize:  
+  - At the simulation's end, generate charts that visualize:  
     - Villager hunger/health/coins over time.  
     - Resource availability across the grid (e.g., average wood in forests, farmland levels).  
     - Market stock levels (if relevant).
@@ -151,7 +151,7 @@ A **key mechanic** that ensures a steady demand for Blacksmith services and Mark
 - Each tool (`axe`, `bow`, `hoe`) has an integer `durability`.  
 - **Using** a tool (Farming, Hunting, Logging) decreases durability by 1.  
 - **If durability** reaches 0:
-  1. The tool breaks and is removed from the villager’s inventory.  
+  1. The tool breaks and is removed from the villager's inventory.  
   2. The villager must **buy** a new tool from the Market or **craft** one if they are a Blacksmith (or have access to one).
 
 ---
@@ -168,7 +168,7 @@ A **key mechanic** that ensures a steady demand for Blacksmith services and Mark
   4. **Sell Surplus** if inventory is too large.  
   5. **At night in winter**, burn wood if possible; else penalize health/happiness.  
 - **Fallback**:  
-  - If a role’s tool is broken or absent, produce partial yield.  
+  - If a role's tool is broken or absent, produce partial yield.  
   - Continue partial yield until a new tool is acquired.
 
 ### **5.2 Market Operations**
@@ -181,6 +181,11 @@ A **key mechanic** that ensures a steady demand for Blacksmith services and Mark
       "bow": 8,
       "hoe": 8
   }
+  ```
+
+---
+
+These updates ensure the design document accurately reflects the changes made to the simulation script, particularly regarding the seasonal farming cycle and its implementation.
 
 
 
