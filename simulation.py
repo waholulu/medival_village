@@ -82,6 +82,13 @@ CONFIG = {
     "INITIAL_VILLAGER_FOOD":  3,
     "INITIAL_VILLAGER_WOOD":  2,
     "INITIAL_VILLAGER_COINS": 10,
+
+    # New config additions
+    "REST_RECOVERY_PER_NIGHT": 4,        # From 3 to offset daily -3 loss
+    "HUNGER_WARNING_THRESHOLD": 3,       # Earlier eating trigger
+    "SKILL_GAIN_PER_ACTION": 0.3,        # Faster skill progression
+    "MIN_TOOL_DURABILITY_BONUS": 0.2,    # Experienced workers preserve tools
+    "MIN_WOOD_RESERVE_WINTER": 2,        # New parameter
 }
 
 # -------------------------------------------------------------------------
@@ -602,6 +609,14 @@ class Villager:
         then apply health/happiness penalties if they stay too low for consecutive steps.
         """
         cfg = self.world.config
+        # Add rest recovery when not working
+        if self.world.world_part_of_day() == "Night":
+            self.rest += cfg["REST_RECOVERY_PER_NIGHT"]  # Add to config
+        
+        # Modified hunger thresholds
+        if self.hunger < cfg["HUNGER_WARNING_THRESHOLD"] + 1:
+            self.eat_if_needed()
+
         # Decrement hunger/rest
         self.hunger -= cfg["HUNGER_DECREMENT_PER_DAY"] / 3.0
         self.rest   -= cfg["REST_DECREMENT_PER_DAY"]   / 3.0

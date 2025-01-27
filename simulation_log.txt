@@ -1,1267 +1,887 @@
 Day 1 [Morning] - Villager 1 (Farmer): Bought 1 hoe. Market now has 4 left.
-Day 1 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
+Day 1 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 7).
 Day 1 [Morning] - Villager 2 (Hunter): Bought 1 bow. Market now has 4 left.
 Day 1 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=4).
 Day 1 [Morning] - Villager 3 (Logger): Bought 1 axe. Market now has 4 left.
 Day 1 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=2).
 Day 1 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=5.
 Day 1 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 1 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 1 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=52.
+Day 1 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 9).
 Day 1 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=2).
-Day 1 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=54.
+Day 1 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=52.
 Day 1 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 1 [Afternoon] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=51.
 Day 1 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=5.
 Day 1 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 2 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 2 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=56.
+Day 2 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 11).
 Day 2 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 2 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=58.
+Day 2 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=54.
 Day 2 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 2 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=53.
 Day 2 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 52 left.
 Day 2 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=5.
 Day 2 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 2 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 2 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=60.
+Day 2 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 13).
 Day 2 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 2 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=62.
+Day 2 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=56.
 Day 2 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=7).
 Day 2 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=54.
 Day 2 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 53 left.
 Day 2 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=6.
 Day 2 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 3 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 3 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=64.
+Day 3 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 15).
 Day 3 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 3 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=66.
+Day 3 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=58.
 Day 3 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 3 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=55.
 Day 3 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 54 left.
 Day 3 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=6.
 Day 3 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 3 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 3 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=68.
+Day 3 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 17).
 Day 3 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 3 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=70.
+Day 3 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=60.
 Day 3 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 3 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=56.
 Day 3 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 55 left.
 Day 3 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=6.
 Day 3 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 4 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 4 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=72.
+Day 4 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 19).
 Day 4 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 4 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=74.
+Day 4 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=62.
 Day 4 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 4 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=57.
 Day 4 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 56 left.
 Day 4 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=7.
 Day 4 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 4 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 4 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=76.
+Day 4 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 21).
 Day 4 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 4 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=78.
+Day 4 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=64.
 Day 4 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 4 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=58.
 Day 4 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 57 left.
 Day 4 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=7.
 Day 4 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 5 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 5 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=80.
+Day 5 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 23).
 Day 5 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 5 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=82.
+Day 5 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=66.
 Day 5 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 5 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=59.
 Day 5 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 58 left.
 Day 5 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=7.
 Day 5 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 5 [Afternoon] - Villager 1 (Farmer): hoe broke (durability=0).
-Day 5 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 5 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=84.
+Day 5 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 25).
 Day 5 [Afternoon] - Villager 2 (Hunter): bow broke (durability=0).
 Day 5 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 5 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=86.
+Day 5 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=68.
 Day 5 [Afternoon] - Villager 3 (Logger): axe broke (durability=0).
 Day 5 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 5 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=60.
 Day 5 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 59 left.
 Day 5 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=8.
 Day 5 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 5 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 6 left.
 Day 5 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 6 left.
 Day 5 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 7 left.
-Day 6 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 6 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=88.
+Day 6 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 27).
 Day 6 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 6 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=90.
+Day 6 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=70.
 Day 6 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 6 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=61.
 Day 6 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 60 left.
 Day 6 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=7.
 Day 6 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 6 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 6 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 6 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=91.
+Day 6 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 29).
 Day 6 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 6 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 6 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=92.
+Day 6 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=71.
 Day 6 [Afternoon] - Villager 3 (Logger): Ate 1 food to increase hunger.
 Day 6 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 6 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=62.
 Day 6 [Afternoon] - Villager 4 (Blacksmith): Ate 1 food to increase hunger.
 Day 6 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 61 left.
-Day 6 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=7.
-Day 6 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 7 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 7 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=94.
+Day 6 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=8.
+Day 6 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 7 [Morning] - Villager 1 (Farmer): Harvested 29 food (tile resource now=29).
+Day 7 [Morning] - Villager 1 (Farmer): Sold 26 food for 26 coins. Market stock now=97.
 Day 7 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 7 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=96.
+Day 7 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=99.
 Day 7 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 7 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=63.
 Day 7 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 62 left.
-Day 7 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=8.
-Day 7 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 7 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 7 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=98.
+Day 7 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=8.
+Day 7 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 7 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 7 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=100.
 Day 7 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 7 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=100.
+Day 7 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=102.
 Day 7 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 7 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=64.
 Day 7 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 63 left.
-Day 7 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=8.
-Day 7 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 8 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 8 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=102.
+Day 7 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=8.
+Day 7 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 8 [Morning] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 8 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=103.
 Day 8 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 8 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=104.
+Day 8 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=105.
 Day 8 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 8 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=65.
 Day 8 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 64 left.
-Day 8 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=8.
-Day 8 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 8 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=9.
+Day 8 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 8 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 8 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 8 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=105.
-Day 8 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 8 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
 Day 8 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 8 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
 Day 8 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=106.
-Day 8 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 8 [Afternoon] - Villager 3 (Logger): Ate 1 food to increase hunger.
 Day 8 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 8 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=66.
-Day 8 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 8 [Afternoon] - Villager 4 (Blacksmith): Ate 1 food to increase hunger.
 Day 8 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 65 left.
-Day 8 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=9.
-Day 8 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 8 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 8 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 8 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 8 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 8 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 9 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 9 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=108.
-Day 9 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 8 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=9.
+Day 8 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 9 [Morning] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 9 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=107.
 Day 9 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 9 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=110.
-Day 9 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 9 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=109.
 Day 9 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 9 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=67.
-Day 9 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 9 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 66 left.
-Day 9 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=9.
-Day 9 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 9 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 9 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 9 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=112.
-Day 9 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 9 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=9.
+Day 9 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 9 [Morning] - Villager 0 (EVENT): Storm reduced resources in ~25 tiles.
+Day 9 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 9 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=110.
 Day 9 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 9 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=114.
-Day 9 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 9 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=112.
 Day 9 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 9 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=68.
-Day 9 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 9 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 67 left.
-Day 9 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=9.
-Day 9 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 9 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 9 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 9 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 9 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 9 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 10 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 10 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=116.
-Day 10 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 9 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=10.
+Day 9 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 10 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 10 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 10 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=113.
 Day 10 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 10 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=118.
-Day 10 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 10 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=115.
 Day 10 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 10 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=69.
-Day 10 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 10 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 68 left.
-Day 10 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=10.
-Day 10 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 10 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 10 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=10.
+Day 10 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 10 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 10 [Afternoon] - Villager 1 (Farmer): hoe broke (durability=0).
-Day 10 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 10 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=119.
-Day 10 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 10 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 10 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
 Day 10 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 10 [Afternoon] - Villager 2 (Hunter): bow broke (durability=0).
 Day 10 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 10 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=120.
-Day 10 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 10 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=116.
 Day 10 [Afternoon] - Villager 3 (Logger): Ate 1 food to increase hunger.
 Day 10 [Afternoon] - Villager 3 (Logger): axe broke (durability=0).
 Day 10 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 10 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=70.
-Day 10 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 10 [Afternoon] - Villager 4 (Blacksmith): Ate 1 food to increase hunger.
 Day 10 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 69 left.
-Day 10 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=10.
-Day 10 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 10 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 10 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 8 left.
+Day 10 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=10.
+Day 10 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 10 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 10 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 10 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 9 left.
 Day 10 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 10 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 10 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 9 left.
 Day 10 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
-Day 10 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 10 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 68 left.
 Day 10 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
-Day 10 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 11 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 11 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=122.
-Day 11 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 11 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 11 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 11 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=117.
 Day 11 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 11 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=124.
-Day 11 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 11 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=119.
 Day 11 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 11 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=69.
-Day 11 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 11 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 68 left.
-Day 11 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=9.
-Day 11 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 11 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 11 [Morning] - Villager 0 (EVENT): Storm reduced resources in ~25 tiles.
-Day 11 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 11 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=126.
-Day 11 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 11 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=10.
+Day 11 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 11 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 11 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
+Day 11 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=120.
 Day 11 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 11 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=128.
-Day 11 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 11 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=122.
 Day 11 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 11 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=70.
-Day 11 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 11 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 69 left.
-Day 11 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=10.
-Day 11 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 11 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 11 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=10.
+Day 11 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 11 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 11 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 11 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 11 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 11 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
-Day 11 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 11 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 68 left.
 Day 11 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
-Day 11 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 12 [Morning] - Villager 1 (Farmer): Bought 1 wood. Market now has 67 left.
-Day 12 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 12 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=130.
-Day 12 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 12 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 12 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 12 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=123.
 Day 12 [Morning] - Villager 2 (Hunter): Bought 1 wood. Market now has 66 left.
 Day 12 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 12 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=132.
-Day 12 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 12 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=125.
 Day 12 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 12 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=67.
-Day 12 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 12 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 66 left.
-Day 12 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=10.
-Day 12 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 12 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 12 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=11.
+Day 12 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 12 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 12 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 12 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=133.
-Day 12 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 12 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 12 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
 Day 12 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 12 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 12 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=134.
-Day 12 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 12 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=126.
 Day 12 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 12 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=68.
-Day 12 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 12 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 67 left.
-Day 12 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=10.
-Day 12 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 12 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 12 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=11.
+Day 12 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 12 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 12 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 12 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 12 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 12 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
-Day 12 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 12 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 66 left.
 Day 12 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
-Day 12 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 13 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 13 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=136.
-Day 13 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 13 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 3).
 Day 13 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 13 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=138.
-Day 13 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 13 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=128.
 Day 13 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 13 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=67.
-Day 13 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 13 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 66 left.
-Day 13 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=11.
-Day 13 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
-Day 13 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 13 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 13 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=140.
-Day 13 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 13 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=11.
+Day 13 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 13 [Morning] - Villager 0 (EVENT): Storm reduced resources in ~25 tiles.
+Day 13 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 5).
 Day 13 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 13 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=142.
-Day 13 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 13 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=130.
 Day 13 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 13 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=68.
-Day 13 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 13 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 67 left.
-Day 13 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=11.
-Day 13 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
-Day 13 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 13 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 13 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 13 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 13 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 14 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 14 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=144.
-Day 14 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 13 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=12.
+Day 13 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 14 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 7).
 Day 14 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 14 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=146.
-Day 14 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 14 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=132.
 Day 14 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 14 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=69.
-Day 14 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 14 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 68 left.
-Day 14 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=11.
-Day 14 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
-Day 14 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 14 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=12.
+Day 14 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 14 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 14 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 14 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=147.
-Day 14 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 14 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 9).
 Day 14 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 14 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 14 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=148.
-Day 14 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 14 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=133.
 Day 14 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 14 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=70.
 Day 14 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 14 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 14 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 69 left.
-Day 14 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=12.
-Day 14 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 14 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=12.
+Day 14 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 14 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 14 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 14 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 14 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 14 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 14 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 14 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 14 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 15 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 15 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=150.
-Day 15 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 15 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 11).
 Day 15 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 15 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=152.
-Day 15 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 15 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=135.
 Day 15 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 15 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=71.
 Day 15 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 15 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 15 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 70 left.
-Day 15 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=12.
-Day 15 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 15 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=13.
+Day 15 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 15 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 15 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 15 [Afternoon] - Villager 1 (Farmer): hoe broke (durability=0).
-Day 15 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 15 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=154.
-Day 15 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 15 [Morning] - Villager 0 (EVENT): Storm reduced resources in ~25 tiles.
+Day 15 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 13).
 Day 15 [Afternoon] - Villager 2 (Hunter): bow broke (durability=0).
 Day 15 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 15 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=156.
-Day 15 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 15 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=137.
 Day 15 [Afternoon] - Villager 3 (Logger): axe broke (durability=0).
 Day 15 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 15 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=72.
 Day 15 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 15 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 15 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 71 left.
-Day 15 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=12.
-Day 15 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 15 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=13.
+Day 15 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 15 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 15 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 15 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 11 left.
-Day 15 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 15 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 11 left.
-Day 15 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 15 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 11 left.
+Day 15 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 12 left.
+Day 15 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 12 left.
 Day 15 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 15 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 15 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 15 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 16 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 16 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=158.
-Day 16 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 16 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 15).
 Day 16 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 16 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=160.
-Day 16 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 16 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=139.
 Day 16 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 16 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=73.
 Day 16 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 16 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 16 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 72 left.
-Day 16 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=12.
+Day 16 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=13.
 Day 16 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 16 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 16 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 16 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 16 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 16 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=161.
-Day 16 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 16 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 17).
 Day 16 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 16 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 16 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=162.
-Day 16 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 16 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=140.
 Day 16 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 16 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=74.
 Day 16 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 16 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 16 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 73 left.
-Day 16 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=12.
+Day 16 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=13.
 Day 16 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 16 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 16 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 16 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 16 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 16 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 16 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 16 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 16 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 17 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 17 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=164.
-Day 17 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 17 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 19).
 Day 17 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 17 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=166.
-Day 17 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 17 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=142.
 Day 17 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 17 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=75.
 Day 17 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 17 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 17 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 74 left.
-Day 17 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=12.
+Day 17 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=13.
 Day 17 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 17 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 17 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 17 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 17 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=168.
-Day 17 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 17 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 21).
 Day 17 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 17 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=170.
-Day 17 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 17 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=144.
 Day 17 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 17 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=76.
 Day 17 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 17 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 17 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 75 left.
-Day 17 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=13.
+Day 17 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=14.
 Day 17 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 17 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 17 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 17 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 17 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 17 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 17 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 17 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 17 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 18 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 18 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=172.
-Day 18 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 18 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 23).
 Day 18 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 18 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=174.
-Day 18 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 18 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=146.
 Day 18 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 18 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=77.
 Day 18 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 18 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 18 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 76 left.
-Day 18 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=13.
+Day 18 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=14.
 Day 18 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 18 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 18 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 18 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 18 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 18 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=175.
-Day 18 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 18 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 25).
 Day 18 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 18 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 18 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=176.
-Day 18 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 18 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=147.
 Day 18 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 18 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=78.
 Day 18 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 18 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 18 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 77 left.
-Day 18 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=13.
+Day 18 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=14.
 Day 18 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 18 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 18 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 18 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 18 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 18 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 18 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 18 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 18 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 19 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 19 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=178.
-Day 19 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 19 [Morning] - Villager 1 (Farmer): Harvested 25 food (tile resource now=25).
+Day 19 [Morning] - Villager 1 (Farmer): Sold 22 food for 22 coins. Market stock now=169.
 Day 19 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 19 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=180.
-Day 19 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 19 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=171.
 Day 19 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 19 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=79.
 Day 19 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 19 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 19 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 78 left.
-Day 19 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=14.
+Day 19 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=15.
 Day 19 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 19 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 19 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 19 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 19 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=182.
-Day 19 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 19 [Morning] - Villager 0 (EVENT): Storm reduced resources in ~25 tiles.
+Day 19 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 19 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=172.
 Day 19 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 19 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=184.
-Day 19 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 19 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
+Day 19 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=174.
+Day 19 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=7).
 Day 19 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=80.
 Day 19 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 19 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 19 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 79 left.
-Day 19 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=14.
+Day 19 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=15.
 Day 19 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 19 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 19 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 19 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 19 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 19 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 19 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 19 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 19 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 20 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 20 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=186.
-Day 20 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 20 [Morning] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 20 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=175.
 Day 20 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 20 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=188.
-Day 20 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 20 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=177.
 Day 20 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 20 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=81.
 Day 20 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 20 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 20 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 80 left.
-Day 20 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=14.
+Day 20 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=15.
 Day 20 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 20 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 20 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 20 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
 Day 20 [Afternoon] - Villager 1 (Farmer): hoe broke (durability=0).
-Day 20 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 20 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=189.
-Day 20 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 20 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
 Day 20 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 20 [Afternoon] - Villager 2 (Hunter): bow broke (durability=0).
 Day 20 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 20 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=190.
-Day 20 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 20 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=178.
 Day 20 [Afternoon] - Villager 3 (Logger): axe broke (durability=0).
 Day 20 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 20 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=82.
 Day 20 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 20 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 20 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 81 left.
-Day 20 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=15.
+Day 20 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=16.
 Day 20 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 20 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 20 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 20 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 13 left.
-Day 20 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 20 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 13 left.
-Day 20 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 20 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 14 left.
+Day 20 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 14 left.
+Day 20 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 14 left.
+Day 20 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 15 left.
 Day 20 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 20 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 20 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 20 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 21 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 21 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=192.
-Day 21 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 21 [Morning] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 21 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=179.
 Day 21 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 21 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=194.
-Day 21 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 21 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=181.
 Day 21 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 21 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=83.
 Day 21 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 21 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 21 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 82 left.
-Day 21 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=14.
+Day 21 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=15.
 Day 21 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 21 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 21 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 21 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 21 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=196.
-Day 21 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 21 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 21 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=182.
 Day 21 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 21 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=198.
-Day 21 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 21 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=184.
 Day 21 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 21 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=84.
 Day 21 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 21 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 21 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 83 left.
-Day 21 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=14.
+Day 21 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=15.
 Day 21 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 21 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 21 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 21 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 21 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 21 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 21 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 21 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 21 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Morning] - Villager 1 (Farmer): Bought 1 wood. Market now has 82 left.
-Day 22 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 22 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=200.
-Day 22 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 22 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 22 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 22 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=185.
 Day 22 [Morning] - Villager 2 (Hunter): Bought 1 wood. Market now has 81 left.
 Day 22 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 22 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=202.
-Day 22 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 22 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=187.
 Day 22 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 22 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=83.
 Day 22 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 22 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 82 left.
-Day 22 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=15.
+Day 22 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=16.
 Day 22 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 22 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 22 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 22 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 22 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=203.
-Day 22 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 22 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 22 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
 Day 22 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 22 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 22 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=204.
-Day 22 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 22 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=188.
 Day 22 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 22 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=84.
 Day 22 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 22 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 83 left.
-Day 22 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=15.
+Day 22 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=16.
 Day 22 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 22 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 22 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 22 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 22 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
 Day 22 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 22 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 22 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 82 left.
 Day 22 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
 Day 22 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 22 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 23 [Morning] - Villager 1 (Farmer): Bought 1 wood. Market now has 81 left.
-Day 23 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 23 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=206.
-Day 23 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 23 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 23 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 23 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=189.
 Day 23 [Morning] - Villager 2 (Hunter): Bought 1 wood. Market now has 80 left.
 Day 23 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 23 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=208.
-Day 23 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 23 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=191.
 Day 23 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 23 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=81.
 Day 23 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 23 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 23 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 80 left.
-Day 23 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=15.
+Day 23 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=16.
 Day 23 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 23 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 23 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 23 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 23 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=210.
-Day 23 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 23 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 23 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
+Day 23 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=192.
 Day 23 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 23 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=212.
-Day 23 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 23 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=194.
 Day 23 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 23 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=82.
 Day 23 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 23 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 23 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 81 left.
-Day 23 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=16.
+Day 23 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=17.
 Day 23 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 23 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 23 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 23 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 23 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 23 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 23 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 23 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
 Day 23 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 23 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 23 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 80 left.
 Day 23 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
 Day 23 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 23 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 24 [Morning] - Villager 1 (Farmer): Bought 1 wood. Market now has 79 left.
-Day 24 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 24 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=214.
-Day 24 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 24 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 24 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 24 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=195.
 Day 24 [Morning] - Villager 2 (Hunter): Bought 1 wood. Market now has 78 left.
 Day 24 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 24 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=216.
-Day 24 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 24 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=197.
 Day 24 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 24 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=79.
 Day 24 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 24 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 24 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 78 left.
-Day 24 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=16.
+Day 24 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=17.
 Day 24 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 24 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 24 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 24 [Morning] - Villager 0 (EVENT): Storm reduced resources in ~25 tiles.
 Day 24 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 24 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 24 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=217.
-Day 24 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 24 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 24 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
 Day 24 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 24 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 24 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=218.
-Day 24 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 24 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=198.
 Day 24 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 24 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=80.
 Day 24 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 24 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 24 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 79 left.
-Day 24 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=16.
+Day 24 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=17.
 Day 24 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 24 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 24 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 24 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 24 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 24 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 24 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 24 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
 Day 24 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 24 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 24 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 78 left.
 Day 24 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
 Day 24 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 24 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 25 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 25 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=220.
-Day 25 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 25 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 3).
 Day 25 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 25 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=222.
-Day 25 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 25 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=200.
 Day 25 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 25 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=79.
 Day 25 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 25 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 25 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 78 left.
-Day 25 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=17.
+Day 25 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=18.
 Day 25 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 25 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 25 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 25 [Afternoon] - Villager 1 (Farmer): hoe broke (durability=0).
-Day 25 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 25 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=224.
-Day 25 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 25 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 5).
 Day 25 [Afternoon] - Villager 2 (Hunter): bow broke (durability=0).
 Day 25 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 25 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=226.
-Day 25 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 25 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=202.
 Day 25 [Afternoon] - Villager 3 (Logger): axe broke (durability=0).
 Day 25 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 25 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=80.
 Day 25 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 25 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 25 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 79 left.
-Day 25 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=17.
+Day 25 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=18.
 Day 25 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 25 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 25 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 25 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 15 left.
-Day 25 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 25 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 16 left.
-Day 25 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 25 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 16 left.
+Day 25 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 17 left.
+Day 25 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 17 left.
 Day 25 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 25 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 25 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 25 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 26 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 26 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=228.
-Day 26 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 26 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 7).
 Day 26 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 26 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=230.
-Day 26 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 26 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=204.
 Day 26 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 26 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=81.
 Day 26 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 26 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 26 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 80 left.
-Day 26 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=16.
-Day 26 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 26 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=18.
+Day 26 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 26 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 26 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 26 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 26 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 26 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=231.
-Day 26 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 26 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 9).
 Day 26 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 26 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 26 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=232.
-Day 26 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 26 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=205.
 Day 26 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 26 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=82.
 Day 26 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 26 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 26 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 81 left.
-Day 26 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=17.
-Day 26 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 26 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=18.
+Day 26 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 26 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 26 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 26 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 26 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 26 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 26 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 26 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 26 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 27 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 27 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=234.
-Day 27 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 27 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 11).
 Day 27 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 27 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=236.
-Day 27 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 27 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=207.
 Day 27 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 27 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=83.
 Day 27 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 27 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 27 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 82 left.
-Day 27 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=17.
-Day 27 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 27 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=18.
+Day 27 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 27 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 27 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 27 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 27 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=238.
-Day 27 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 27 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 13).
 Day 27 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 27 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=240.
-Day 27 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 27 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=209.
 Day 27 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 27 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=84.
 Day 27 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 27 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 27 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 83 left.
-Day 27 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=17.
-Day 27 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 27 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=19.
+Day 27 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 27 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 27 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 27 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 27 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 27 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 27 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 27 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 27 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 28 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 28 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=242.
-Day 28 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 28 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 15).
 Day 28 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 28 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=244.
-Day 28 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 28 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=211.
 Day 28 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 28 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=85.
 Day 28 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 28 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 28 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 84 left.
-Day 28 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=18.
-Day 28 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 28 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=19.
+Day 28 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 28 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 28 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 28 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 28 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 28 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=245.
-Day 28 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 28 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 17).
 Day 28 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 28 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 28 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=246.
-Day 28 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 28 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=212.
 Day 28 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 28 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=86.
 Day 28 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 28 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 28 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 85 left.
-Day 28 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=18.
-Day 28 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 28 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=19.
+Day 28 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 28 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 28 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 28 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 28 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 28 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 28 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 28 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 28 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 29 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 29 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=248.
-Day 29 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 29 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 19).
 Day 29 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 29 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=250.
-Day 29 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 29 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=214.
 Day 29 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 29 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=87.
 Day 29 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 29 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 29 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 86 left.
-Day 29 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=18.
-Day 29 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 29 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=20.
+Day 29 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 29 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 29 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 29 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 29 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=252.
-Day 29 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 29 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 21).
 Day 29 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 29 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=254.
-Day 29 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 29 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=216.
 Day 29 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 29 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=88.
 Day 29 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 29 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 29 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 87 left.
-Day 29 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=19.
-Day 29 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 29 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=20.
+Day 29 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 29 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 29 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 29 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 29 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 29 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 29 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 29 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 29 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 30 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 30 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=256.
-Day 30 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 30 [Morning] - Villager 1 (Farmer): Prepared fields (resource now 23).
 Day 30 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 30 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=258.
-Day 30 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 30 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=218.
 Day 30 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 30 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=89.
 Day 30 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 30 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 30 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 88 left.
-Day 30 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=19.
-Day 30 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 30 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=20.
+Day 30 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 30 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 30 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 30 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 30 [Afternoon] - Villager 1 (Farmer): hoe broke (durability=0).
-Day 30 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 30 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=259.
-Day 30 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 30 [Afternoon] - Villager 1 (Farmer): Prepared fields (resource now 25).
 Day 30 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 30 [Afternoon] - Villager 2 (Hunter): bow broke (durability=0).
 Day 30 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 30 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=260.
-Day 30 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 30 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=219.
 Day 30 [Afternoon] - Villager 3 (Logger): axe broke (durability=0).
 Day 30 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 30 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=90.
 Day 30 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 30 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 30 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 89 left.
-Day 30 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=19.
-Day 30 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 30 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=21.
+Day 30 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 30 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 30 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 30 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 18 left.
-Day 30 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 30 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 18 left.
-Day 30 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 30 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 18 left.
+Day 30 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 19 left.
+Day 30 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 20 left.
 Day 30 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 30 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 30 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 30 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 31 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 31 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=262.
-Day 31 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 31 [Morning] - Villager 1 (Farmer): Harvested 25 food (tile resource now=25).
+Day 31 [Morning] - Villager 1 (Farmer): Sold 22 food for 22 coins. Market stock now=241.
 Day 31 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 31 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=264.
-Day 31 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 31 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=243.
 Day 31 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 31 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=91.
 Day 31 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 31 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 31 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 90 left.
-Day 31 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=19.
-Day 31 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 31 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=20.
+Day 31 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 31 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 31 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 31 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 31 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=266.
-Day 31 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 31 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 31 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=244.
 Day 31 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 31 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=268.
-Day 31 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 31 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=246.
 Day 31 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 31 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=92.
 Day 31 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 31 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 31 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 91 left.
-Day 31 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=19.
-Day 31 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 31 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=21.
+Day 31 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 31 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 31 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 31 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 31 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 31 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 31 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 31 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 31 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 32 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 32 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=270.
-Day 32 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 32 [Morning] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 32 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=247.
 Day 32 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 32 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=272.
-Day 32 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 32 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=249.
 Day 32 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 32 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=93.
 Day 32 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 32 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 32 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 92 left.
-Day 32 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=19.
-Day 32 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 32 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=21.
+Day 32 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 32 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 32 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 32 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 32 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 32 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=273.
-Day 32 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 32 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
 Day 32 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 32 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 32 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=274.
-Day 32 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 32 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=250.
 Day 32 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 32 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=94.
 Day 32 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 32 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 32 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 93 left.
-Day 32 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=20.
-Day 32 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 32 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=21.
+Day 32 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 32 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 32 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 32 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 32 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 32 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 32 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 32 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 32 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 33 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 33 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=276.
-Day 33 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 33 [Morning] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 33 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=251.
 Day 33 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 33 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=278.
-Day 33 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 33 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=253.
 Day 33 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 33 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=95.
 Day 33 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 33 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 33 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 94 left.
-Day 33 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=20.
-Day 33 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 33 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=22.
+Day 33 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 33 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 33 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 33 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 33 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=280.
-Day 33 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 33 [Afternoon] - Villager 1 (Farmer): Harvested 1 food (tile resource now=1).
+Day 33 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=254.
 Day 33 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 33 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=282.
-Day 33 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 33 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=256.
 Day 33 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 33 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=96.
 Day 33 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 33 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 33 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 95 left.
-Day 33 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=20.
-Day 33 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 33 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=22.
+Day 33 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 33 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 33 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 33 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 33 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 33 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 33 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 33 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 33 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Morning] - Villager 1 (Farmer): Bought 1 wood. Market now has 94 left.
-Day 34 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 34 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=284.
-Day 34 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 34 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 34 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 34 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=257.
 Day 34 [Morning] - Villager 2 (Hunter): Bought 1 wood. Market now has 93 left.
 Day 34 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 34 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=286.
-Day 34 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 34 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=259.
 Day 34 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 34 [Morning] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=95.
 Day 34 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 34 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 94 left.
-Day 34 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=21.
-Day 34 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 34 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=22.
+Day 34 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 34 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 34 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 34 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 34 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=287.
-Day 34 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 34 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 34 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
 Day 34 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 34 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 34 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=288.
-Day 34 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 34 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=260.
 Day 34 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 34 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=96.
 Day 34 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 34 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 95 left.
-Day 34 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=21.
-Day 34 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 34 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=23.
+Day 34 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 34 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 34 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 34 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 34 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
 Day 34 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 34 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 34 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 94 left.
 Day 34 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
 Day 34 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 34 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 35 [Morning] - Villager 1 (Farmer): Bought 1 wood. Market now has 93 left.
-Day 35 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 35 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=290.
-Day 35 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 35 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 35 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 35 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=261.
 Day 35 [Morning] - Villager 2 (Hunter): Bought 1 wood. Market now has 92 left.
 Day 35 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 35 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=292.
-Day 35 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 35 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=263.
 Day 35 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 35 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=93.
 Day 35 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 35 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 35 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 92 left.
-Day 35 [Morning] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=21.
-Day 35 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 35 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=23.
+Day 35 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 35 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 35 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 35 [Afternoon] - Villager 1 (Farmer): hoe broke (durability=0).
-Day 35 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=2).
-Day 35 [Afternoon] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=294.
-Day 35 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 35 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 35 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
+Day 35 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=264.
 Day 35 [Afternoon] - Villager 2 (Hunter): bow broke (durability=0).
 Day 35 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 35 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=296.
-Day 35 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 35 [Afternoon] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=266.
 Day 35 [Afternoon] - Villager 3 (Logger): axe broke (durability=0).
 Day 35 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 35 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=94.
 Day 35 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 35 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 35 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 93 left.
-Day 35 [Afternoon] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=22.
-Day 35 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
+Day 35 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=23.
+Day 35 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
 Day 35 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 35 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 35 [Night] - Villager 1 (Farmer): Bought 1 hoe. Market now has 20 left.
 Day 35 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 35 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 35 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 20 left.
+Day 35 [Night] - Villager 2 (Hunter): Bought 1 bow. Market now has 22 left.
 Day 35 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 35 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
-Day 35 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 21 left.
+Day 35 [Night] - Villager 3 (Logger): Bought 1 axe. Market now has 22 left.
 Day 35 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
 Day 35 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 35 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 35 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 92 left.
 Day 35 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
 Day 35 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 35 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Morning] - Villager 1 (Farmer): Bought 1 wood. Market now has 91 left.
-Day 36 [Morning] - Villager 1 (Farmer): Farming => +2 food (tile resource now=1).
-Day 36 [Morning] - Villager 1 (Farmer): Sold 2 food for 2 coins. Market stock now=298.
-Day 36 [Morning] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 36 [Morning] - Villager 1 (Farmer): Cannot farm in winter.
+Day 36 [Morning] - Villager 1 (Farmer): Foraging => +1 food.
+Day 36 [Morning] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=267.
 Day 36 [Morning] - Villager 2 (Hunter): Bought 1 wood. Market now has 90 left.
 Day 36 [Morning] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=1).
-Day 36 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=300.
-Day 36 [Morning] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 36 [Morning] - Villager 2 (Hunter): Sold 2 food for 2 coins. Market stock now=269.
 Day 36 [Morning] - Villager 3 (Logger): Logging => +2 wood (tile resource now=0).
 Day 36 [Morning] - Villager 3 (Logger): Sold 1 wood for 2 coins. Market stock now=91.
 Day 36 [Morning] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 36 [Morning] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Morning] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 90 left.
-Day 36 [Morning] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=21.
-Day 36 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
+Day 36 [Morning] - Villager 4 (Blacksmith): Sold 1 axe for 5 coins. Market stock now=23.
+Day 36 [Morning] - Villager 4 (Blacksmith): Crafted & sold 1 axe (consumed 1 wood).
 Day 36 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 36 [Morning] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Afternoon] - Villager 1 (Farmer): Ate 1 food to increase hunger.
-Day 36 [Afternoon] - Villager 1 (Farmer): Farming => +2 food (tile resource now=0).
-Day 36 [Afternoon] - Villager 1 (Farmer): Sold 1 food for 1 coins. Market stock now=301.
-Day 36 [Afternoon] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 36 [Afternoon] - Villager 1 (Farmer): Cannot farm in winter.
+Day 36 [Afternoon] - Villager 1 (Farmer): Foraging => +1 food.
 Day 36 [Afternoon] - Villager 2 (Hunter): Ate 1 food to increase hunger.
 Day 36 [Afternoon] - Villager 2 (Hunter): Hunting => +2 food (tile resource now=0).
-Day 36 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=302.
-Day 36 [Afternoon] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
+Day 36 [Afternoon] - Villager 2 (Hunter): Sold 1 food for 1 coins. Market stock now=270.
 Day 36 [Afternoon] - Villager 3 (Logger): Logging => +2 wood (tile resource now=8).
 Day 36 [Afternoon] - Villager 3 (Logger): Sold 2 wood for 4 coins. Market stock now=92.
 Day 36 [Afternoon] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 36 [Afternoon] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Afternoon] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 91 left.
-Day 36 [Afternoon] - Villager 4 (Blacksmith): Sold 1 hoe for 5 coins. Market stock now=21.
-Day 36 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 hoe (consumed 1 wood).
+Day 36 [Afternoon] - Villager 4 (Blacksmith): Sold 1 bow for 5 coins. Market stock now=23.
+Day 36 [Afternoon] - Villager 4 (Blacksmith): Crafted & sold 1 bow (consumed 1 wood).
 Day 36 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 36 [Afternoon] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Night] - Villager 1 (Farmer): Burned 1 wood on winter night.
-Day 36 [Night] - Villager 1 (Farmer): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Night] - Villager 2 (Hunter): Burned 1 wood on winter night.
-Day 36 [Night] - Villager 2 (Hunter): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Night] - Villager 3 (Logger): Burned 1 wood on winter night.
 Day 36 [Night] - Villager 3 (Logger): Suffering from prolonged hunger => health/happiness penalty.
-Day 36 [Night] - Villager 3 (Logger): Suffering from prolonged lack of rest => health/happiness penalty.
 Day 36 [Night] - Villager 4 (Blacksmith): Bought 1 wood. Market now has 90 left.
 Day 36 [Night] - Villager 4 (Blacksmith): Burned 1 wood on winter night.
 Day 36 [Night] - Villager 4 (Blacksmith): Suffering from prolonged hunger => health/happiness penalty.
-Day 36 [Night] - Villager 4 (Blacksmith): Suffering from prolonged lack of rest => health/happiness penalty.

@@ -26,9 +26,14 @@ This simulation models a **small medieval village**. The core elements include:
 ## **2. Key Features & Requirements**
 
 1. **Villager Needs**  
-   - **Hunger**: Gradually depletes; must be satisfied with food or villager health suffers.  
-   - **Rest**: Decreases over partial-day cycles; can be replenished (e.g., at night or designated resting times).  
+   - **Hunger**: Gradually depletes; must be satisfied with food or villager health suffers.
+     - Early warning system triggers eating at `HUNGER_WARNING_THRESHOLD` (3) before critical levels
+     - Tracks consecutive partial-days below threshold to determine penalties
+   - **Rest**: Decreases over partial-day cycles; recovers +4 points during night.
+     - Tracks consecutive partial-days below threshold for penalties
+     - Penalties only apply after multiple consecutive low-rest periods
    - **Health & Happiness**: Influenced by hunger, rest, cold (in winter), and random events.
+     - Takes -1 penalty when needs remain low for consecutive periods
 
 2. **Roles & Tools**  
    - **Farmer**  
@@ -69,16 +74,19 @@ This simulation models a **small medieval village**. The core elements include:
    - This prevents resource hoarding and maintains a flow of goods in the Market.
 
 7. **Weather & Random Events**  
-   - **Random storms** can reduce resource levels on tiles or disrupt gathering efforts.  
+   - **Storm System**:
+     - Occurs only during morning periods
+     - Reduces resource levels by 2 in affected tiles
+     - Impacts approximately 25% of the map tiles
+     - 10% chance of storm each morning
    - Additional events (e.g., pest infestations, droughts) can be integrated to impact farmland or forest resources.  
    - **Crop-Specific Weather Impact**: Spring or Summer storms or droughts may reduce the eventual Autumn harvest if farmland resource levels drop.
+
 
 8. **Simulation & Logging**  
    - **Core** simulation (headless) updates villagers, the world, and the market each partial-day cycle.  
    - **Logs** record each villager's actions, transactions, tool usage, resource changes, and random events.  
    - Optional **plotting** (Plotly) at the simulation's end to visualize resources, villager status, and key metrics over time.
-
----
 
 ## **3. Architecture**
 
@@ -150,9 +158,10 @@ A **key mechanic** that ensures a steady demand for Blacksmith services and Mark
 
 - Each tool (`axe`, `bow`, `hoe`) has an integer `durability`.  
 - **Using** a tool (Farming, Hunting, Logging) decreases durability by 1.  
+- **Tool Storage**: Tools are tracked separately from regular inventory with individual durability values
 - **If durability** reaches 0:
   1. The tool breaks and is removed from the villager's inventory.  
-  2. The villager must **buy** a new tool from the Market or **craft** one if they are a Blacksmith (or have access to one).
+  2. The villager must **buy** a new tool from the Market or **craft** one if they are a Blacksmith.
 
 ---
 
@@ -172,16 +181,12 @@ A **key mechanic** that ensures a steady demand for Blacksmith services and Mark
   - Continue partial yield until a new tool is acquired.
 
 ### **5.2 Market Operations**
-- **Fixed ITEM_PRICES**: A dictionary, e.g.:
-  ```python
-  ITEM_PRICES = {
-      "food": 2,
-      "wood": 1,
-      "axe": 10,
-      "bow": 8,
-      "hoe": 8
-  }
-  ```
+- **Fixed ITEM_PRICES**: A dictionary managing costs of all items
+- **Tool Transactions**:
+  - Tools are handled differently from regular items
+  - Each new tool starts with full durability
+  - Blacksmiths craft the tool type with lowest market stock
+  - Requires 1 wood per tool crafted
 
 ---
 
