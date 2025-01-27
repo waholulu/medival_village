@@ -50,8 +50,8 @@ CONFIG = {
     "HUNGER_CRITICAL_THRESHOLD": 5,
     "REST_CRITICAL_THRESHOLD":    5,
 
-    # **New** Hunger/Rest Penalty
-    "HUNGER_LOW_PENALTY_THRESHOLD": 3,     # if < 3 for more than a partial day
+    # Hunger/Rest Penalty
+    "HUNGER_LOW_PENALTY_THRESHOLD": 3,
     "REST_LOW_PENALTY_THRESHOLD":   3,
     "HEALTH_PENALTY_FOR_LOW_NEEDS": 1,
     "HAPPINESS_PENALTY_FOR_LOW_NEEDS": 1,
@@ -84,11 +84,11 @@ CONFIG = {
     "INITIAL_VILLAGER_COINS": 10,
 
     # New config additions
-    "REST_RECOVERY_PER_NIGHT": 4,        # From 3 to offset daily -3 loss
-    "HUNGER_WARNING_THRESHOLD": 3,       # Earlier eating trigger
-    "SKILL_GAIN_PER_ACTION": 0.3,        # Faster skill progression
-    "MIN_TOOL_DURABILITY_BONUS": 0.2,    # Experienced workers preserve tools
-    "MIN_WOOD_RESERVE_WINTER": 2,        # New parameter
+    "REST_RECOVERY_PER_NIGHT": 4,
+    "HUNGER_WARNING_THRESHOLD": 3,
+    "SKILL_GAIN_PER_ACTION": 0.3,
+    "MIN_TOOL_DURABILITY_BONUS": 0.2,
+    "MIN_WOOD_RESERVE_WINTER": 2,
 }
 
 # -------------------------------------------------------------------------
@@ -98,29 +98,17 @@ CONFIG = {
 LOG_ENTRIES = []       # For textual logs
 STATS_TIMESERIES = []  # For numeric data (plots, etc.)
 
-
 def log_action(day, part, villager_id, role, message):
-    """
-    Simple function to record a log entry.
-    """
     LOG_ENTRIES.append((day, part, villager_id, role, message))
 
-
 def export_log(filename="simulation_log.txt"):
-    """
-    Writes out the textual log of actions.
-    """
     with open(filename, "w", encoding="utf-8") as f:
         for day, part, vid, role, msg in LOG_ENTRIES:
             line = f"Day {day} [{part}] - Villager {vid} ({role}): {msg}\n"
             f.write(line)
     print(f"Log written to {filename}")
 
-
 def generate_charts(filename="simulation_charts.html"):
-    """
-    Creates some Plotly-based line charts for key villager stats over time.
-    """
     df = pd.DataFrame(STATS_TIMESERIES).reset_index().rename(columns={"index": "time_step"})
     fig = go.Figure()
 
@@ -144,7 +132,6 @@ def generate_charts(filename="simulation_charts.html"):
                       xaxis_title="Time Step",
                       yaxis_title="Value")
 
-    # Save HTML
     html_div = pyo.plot(fig, include_plotlyjs=False, output_type='div')
     with open(filename, "w", encoding="utf-8") as f:
         f.write(
@@ -156,46 +143,31 @@ def generate_charts(filename="simulation_charts.html"):
         f.write("\n</body></html>")
     print(f"Charts generated: {filename}")
 
-
 # -------------------------------------------------------------------------
 #  TILE & MARKET
 # -------------------------------------------------------------------------
 
 class Tile:
-    """
-    A single grid cell storing terrain, resource_level, and possibly an owner.
-    """
     def __init__(self, terrain_type="field", resource_level=5, owner_id=None):
         self.terrain_type = terrain_type
         self.resource_level = resource_level
         self.owner_id = owner_id
 
-
 class Market:
-    """
-    A simple Market with fixed item prices and a stock count.
-    Villagers can buy/sell if stock and coins allow.
-    """
     def __init__(self, config):
         self.config = config
         self.stock = dict(config["INITIAL_MARKET_STOCK"])  # copy
 
     def buy(self, villager, item, qty=1):
-        """
-        Villager attempts to buy `qty` of `item`.
-        Must have enough coins and Market must have enough stock.
-        """
         if self.stock.get(item, 0) < qty:
-            return False  # out of stock
+            return False
         cost = self.config["ITEM_PRICES"][item] * qty
         if villager.coins < cost:
-            return False  # not enough money
+            return False
 
-        # Transaction
         villager.coins -= cost
         self.stock[item] -= qty
 
-        # Tools vs normal inventory
         if item in ["axe", "bow", "hoe"]:
             villager.add_tool(item, qty)
         else:
@@ -208,11 +180,6 @@ class Market:
         return True
 
     def sell(self, villager, item, qty=1):
-        """
-        Villager sells `qty` of `item`.
-        Market has infinite coins, but the item is added to Market stock.
-        """
-        # Verify villager has enough
         if item in ["axe", "bow", "hoe"]:
             have_qty = villager.get_tool_count(item)
             if have_qty < qty:
@@ -233,15 +200,11 @@ class Market:
                    f"Sold {qty} {item} for {revenue} coins. Market stock now={self.stock[item]}.")
         return True
 
-
 # -------------------------------------------------------------------------
 #  WORLD
 # -------------------------------------------------------------------------
 
 class World:
-    """
-    Holds the tile grid, the Market, time/season, and triggers random events.
-    """
     def __init__(self, config):
         self.config = config
         self.width = config["GRID_WIDTH"]
@@ -249,7 +212,6 @@ class World:
         self.grid = self._generate_tiles()
         self.market = Market(config)
 
-        # Time
         self.day_count = 1
         self.season_index = 0
         self.part_of_day_index = 0
@@ -263,11 +225,12 @@ class World:
                 if terrain == "forest":
                     lvl = 5
                 elif terrain == "field":
-                    lvl = 1  # Fields start 1, requiring Spring planting
+                    lvl = 1
                 else:
                     lvl = 0
                 row.append(Tile(terrain, lvl))
             grid.append(row)
+
         # Assign farmland to all farmers
         farmer_count = self.config["NUM_FARMERS"]
         current_farmer = 1
@@ -277,9 +240,8 @@ class World:
             tile = grid[y][2]
             tile.owner_id = current_farmer
             tile.terrain_type = "field"
-            tile.resource_level = 5  # Start with fertile soil
+            tile.resource_level = 5
             current_farmer += 1
-            
         return grid
 
     def world_part_of_day(self):
@@ -292,25 +254,16 @@ class World:
         return (self.get_current_season() == "Winter")
 
     def update_resources_and_events(self):
-        """
-        Daily events like storms, resource regeneration, etc.
-        Called once per partial day step.
-        """
-        # If morning => might trigger storm
-        if self.part_of_day_index == 0:  # "Morning" of a new day
+        if self.part_of_day_index == 0:  # "Morning"
             if random.random() < self.config["STORM_PROBABILITY"]:
                 self._trigger_storm()
 
-        # Regrow forest
         for row in self.grid:
             for tile in row:
                 if tile.terrain_type == "forest":
                     tile.resource_level = min(tile.resource_level + 1, 10)
 
     def _trigger_storm(self):
-        """
-        Storm reduces resource levels in ~1/4 of the tiles by STORM_RESOURCE_REDUCTION.
-        """
         reduction = self.config["STORM_RESOURCE_REDUCTION"]
         num_tiles = (self.width * self.height) // 4
         for _ in range(num_tiles):
@@ -318,52 +271,38 @@ class World:
             ry = random.randint(0, self.height - 1)
             tile = self.grid[ry][rx]
             tile.resource_level = max(0, tile.resource_level - reduction)
-        # Log storm
         log_action(self.day_count, "Morning", 0, "EVENT",
                    f"Storm reduced resources in ~{num_tiles} tiles.")
 
     def advance_time(self):
-        """
-        Moves to next partial day. If we've passed Night, increment day.
-        Also increments seasons as needed.
-        """
         self.part_of_day_index += 1
         if self.part_of_day_index >= len(self.config["PARTS_OF_DAY"]):
-            # new day
             self.part_of_day_index = 0
             self.day_count += 1
-            # check season
-            if (self.day_count - 1) % self.config["DAYS_PER_SEASON"] == 0:
-                self.season_index += 1
-                if self.season_index >= len(self.config["SEASONS"]):
-                    self.season_index = 0
 
+            if (self.day_count - 1) % self.config["DAYS_PER_SEASON"] == 0 and self.day_count > 1:
+                self.season_index += 1
+                self.season_index %= len(self.config["SEASONS"])
 
 # -------------------------------------------------------------------------
 #  VILLAGER
 # -------------------------------------------------------------------------
 
 class Villager:
-    """
-    A single agent with role, needs, inventory, and tool usage.
-    """
     def __init__(self, vid, role, world):
         self.id = vid
         self.role = role
         self.world = world
         cfg = world.config
 
-        # Needs
         self.hunger = 10
         self.rest = 10
         self.health = 10
         self.happiness = 10
 
-        # Track how many consecutive partial-steps hunger/rest is below threshold
         self.low_hunger_streak = 0
         self.low_rest_streak   = 0
 
-        # Inventory & Tools
         self.inventory = {
             "food": cfg["INITIAL_VILLAGER_FOOD"],
             "wood": cfg["INITIAL_VILLAGER_WOOD"]
@@ -371,22 +310,18 @@ class Villager:
         self.coins = cfg["INITIAL_VILLAGER_COINS"]
         self.tools = {"hoe": [], "bow": [], "axe": []}
 
-    # ---------------------------------------------------------------------
-    #  Common Steps
-    # ---------------------------------------------------------------------
+        # Skill system
+        self.skill_level = 1.0
+
     def update(self):
-        """
-        Called once per partial day. The order:
-          1) Check if we need to eat
-          2) Buy essential items (esp winter wood)
-          3) Ensure we have role's primary tool
-          4) Perform role action (morning/afternoon only)
-          5) Sell surplus
-          6) If winter & night => burn wood
-          7) Decrement needs + apply penalty if too low
-          8) Record stats
-        """
-        self.eat_if_needed()
+        if self.health <= 0:
+            log_action(self.world.day_count, self.world_part_of_day(),
+                       self.id, self.role, "Health is 0 => incapacitated, no actions.")
+            return
+
+        if self.world.world_part_of_day() == "Morning":
+            self.eat_if_needed()
+
         self.buy_essential_items()
         self.buy_primary_tool()
 
@@ -404,13 +339,7 @@ class Villager:
     def world_part_of_day(self):
         return self.world.world_part_of_day()
 
-    # ---------------------------------------------------------------------
-    #  Eating & Buying
-    # ---------------------------------------------------------------------
     def eat_if_needed(self):
-        """
-        If hunger < HUNGER_CRITICAL_THRESHOLD and we have food, eat 1.
-        """
         if self.hunger < self.world.config["HUNGER_CRITICAL_THRESHOLD"]:
             if self.inventory.get("food", 0) > 0:
                 self.inventory["food"] -= 1
@@ -421,9 +350,6 @@ class Villager:
                            "Ate 1 food to increase hunger.")
 
     def buy_essential_items(self):
-        """
-        Buy wood if it's winter and we have 0 wood.
-        """
         cfg = self.world.config
         if self.world.is_winter() and self.inventory.get("wood", 0) < 1:
             wood_price = cfg["ITEM_PRICES"]["wood"]
@@ -432,24 +358,20 @@ class Villager:
                 self.world.market.buy(self, "wood", 1)
 
     def buy_primary_tool(self):
-        """
-        Ensure we have at least 1 tool that matches our role.
-        """
         role_tool_map = {
             "Farmer": "hoe",
             "Hunter": "bow",
             "Logger": "axe",
-            "Blacksmith": None  # doesn't strictly need a tool
+            "Blacksmith": None
         }
         tool = role_tool_map.get(self.role)
-        if tool:
-            if self.get_tool_count(tool) < 1:
-                self.world.market.buy(self, tool, 1)
+        if tool and self.get_tool_count(tool) < 1:
+            self.world.market.buy(self, tool, 1)
 
-    # ---------------------------------------------------------------------
-    #  Role Actions
-    # ---------------------------------------------------------------------
     def do_role_action(self):
+        # Increase skill
+        self.skill_level += self.world.config["SKILL_GAIN_PER_ACTION"]
+
         if self.role == "Farmer":
             self.farm()
         elif self.role == "Hunter":
@@ -464,28 +386,27 @@ class Villager:
         if tile is None:
             self.forage()
             return
-        
+
         season = self.world.get_current_season()
-        
-        if season == "Autumn":  # Harvest only in autumn
+        if season == "Autumn":
             if self.get_tool_count("hoe") > 0:
-                amount = tile.resource_level  # Harvest accumulated value
+                amount = tile.resource_level
                 self.degrade_tool("hoe")
             else:
-                amount = tile.resource_level // 2  # Reduced yield without tool
-                
+                amount = tile.resource_level // 2
+
             self.inventory["food"] += amount
             log_action(self.world.day_count, self.world_part_of_day(),
                        self.id, self.role,
-                       f"Harvested {amount} food (tile resource now={tile.resource_level}).")
-            tile.resource_level = 0  # Reset after harvest
-            
-        elif season in ["Spring", "Summer"]:  # Prepare fields
+                       f"Harvested {amount} food (tile resource now=0).")
+            tile.resource_level = 0
+
+        elif season in ["Spring", "Summer"]:
             tile.resource_level += 2
             log_action(self.world.day_count, self.world_part_of_day(),
                        self.id, self.role,
                        f"Prepared fields (resource now {tile.resource_level}).")
-            
+
         elif season == "Winter":
             log_action(self.world.day_count, self.world_part_of_day(),
                        self.id, self.role,
@@ -529,27 +450,19 @@ class Villager:
                    f"Logging => +{amount} wood (tile resource now={tile.resource_level}).")
 
     def craft_tools(self):
-        """
-        Blacksmith crafts whichever tool is least stocked in Market.
-        Consumes 1 wood from own inventory, then sells that tool back.
-        """
         mk = self.world.market
         tool_list = ["axe", "bow", "hoe"]
         stocks = {t: mk.stock.get(t, 0) for t in tool_list}
-        # pick the one with the lowest stock
         least_tool = min(stocks, key=stocks.get)
 
-        # need at least 1 wood
         if self.inventory.get("wood", 0) < 1:
             mk.buy(self, "wood", 1)
         if self.inventory.get("wood", 0) < 1:
-            # can't craft
             log_action(self.world.day_count, self.world_part_of_day(),
                        self.id, self.role,
                        "Wanted to craft but no wood available.")
             return
 
-        # craft
         self.inventory["wood"] -= 1
         self.add_tool(least_tool, 1)
         mk.sell(self, least_tool, 1)
@@ -558,27 +471,19 @@ class Villager:
                    f"Crafted & sold 1 {least_tool} (consumed 1 wood).")
 
     def forage(self):
-        """
-        Minimal fallback: gather +1 food if no resources or farmland found.
-        """
         self.inventory["food"] = self.inventory.get("food", 0) + 1
         log_action(self.world.day_count, self.world_part_of_day(),
                    self.id, self.role, "Foraging => +1 food.")
 
-    # ---------------------------------------------------------------------
-    #  Surplus & Winter Wood
-    # ---------------------------------------------------------------------
     def sell_surplus(self):
-        """
-        Sell items above threshold. Keep at least 1 wood if winter.
-        """
         cfg = self.world.config
-        required_wood = 1 if self.world.is_winter() else 0
+        required_wood = 0
+        if self.world.is_winter():
+            required_wood = max(required_wood, cfg["MIN_WOOD_RESERVE_WINTER"])
 
         for item, thresh in cfg["SURPLUS_THRESHOLDS"].items():
             current_amount = self.inventory.get(item, 0)
             if item == "wood":
-                # keep at least required_wood
                 final_thresh = max(thresh, required_wood)
                 if current_amount > final_thresh:
                     surplus = current_amount - final_thresh
@@ -600,30 +505,16 @@ class Villager:
             log_action(self.world.day_count, self.world_part_of_day(),
                        self.id, self.role, "No wood => suffered cold (health & happiness -1).")
 
-    # ---------------------------------------------------------------------
-    #  Needs & Penalties
-    # ---------------------------------------------------------------------
     def update_needs_and_penalties(self):
-        """
-        Each partial day, decrease hunger/rest,
-        then apply health/happiness penalties if they stay too low for consecutive steps.
-        """
         cfg = self.world.config
-        # Add rest recovery when not working
-        if self.world.world_part_of_day() == "Night":
-            self.rest += cfg["REST_RECOVERY_PER_NIGHT"]  # Add to config
-        
-        # Modified hunger thresholds
-        if self.hunger < cfg["HUNGER_WARNING_THRESHOLD"] + 1:
-            self.eat_if_needed()
+        if self.world_part_of_day() == "Night":
+            self.rest += cfg["REST_RECOVERY_PER_NIGHT"]
 
-        # Decrement hunger/rest
         self.hunger -= cfg["HUNGER_DECREMENT_PER_DAY"] / 3.0
         self.rest   -= cfg["REST_DECREMENT_PER_DAY"]   / 3.0
         self.hunger = max(0, self.hunger)
         self.rest   = max(0, self.rest)
 
-        # Track consecutive partial-day streaks if below thresholds
         if self.hunger < cfg["HUNGER_LOW_PENALTY_THRESHOLD"]:
             self.low_hunger_streak += 1
         else:
@@ -634,7 +525,6 @@ class Villager:
         else:
             self.low_rest_streak = 0
 
-        # If we've stayed below threshold for more than 1 partial step, apply penalty
         if self.low_hunger_streak > 1:
             self.health    = max(0, self.health - cfg["HEALTH_PENALTY_FOR_LOW_NEEDS"])
             self.happiness = max(0, self.happiness - cfg["HAPPINESS_PENALTY_FOR_LOW_NEEDS"])
@@ -649,9 +539,6 @@ class Villager:
                        self.id, self.role,
                        "Suffering from prolonged lack of rest => health/happiness penalty.")
 
-    # ---------------------------------------------------------------------
-    #  Tools
-    # ---------------------------------------------------------------------
     def add_tool(self, tool_name, qty=1):
         for _ in range(qty):
             self.tools[tool_name].append({"durability": self.world.config["INITIAL_TOOL_DURABILITY"]})
@@ -665,29 +552,25 @@ class Villager:
         return len(self.tools[tool_name])
 
     def degrade_tool(self, tool_name):
-        """
-        Degrade the first tool of that type by 1. If it hits 0, break it.
-        """
-        if self.tools[tool_name]:
-            self.tools[tool_name][0]["durability"] -= 1
-            if self.tools[tool_name][0]["durability"] <= 0:
-                self.tools[tool_name].pop(0)
-                log_action(self.world.day_count, self.world_part_of_day(),
-                           self.id, self.role, f"{tool_name} broke (durability=0).")
+        if not self.tools[tool_name]:
+            return
+        base_degradation = 1
+        skill_reduction = self.skill_level * self.world.config["MIN_TOOL_DURABILITY_BONUS"]
+        final_degradation = base_degradation - skill_reduction
+        final_degradation = max(0.2, final_degradation)
+        self.tools[tool_name][0]["durability"] -= final_degradation
 
-    # ---------------------------------------------------------------------
-    #  Searching Tiles
-    # ---------------------------------------------------------------------
+        if self.tools[tool_name][0]["durability"] <= 0:
+            self.tools[tool_name].pop(0)
+            log_action(self.world.day_count, self.world_part_of_day(),
+                       self.id, self.role, f"{tool_name} broke (durability=0).")
+
     def find_owned_or_public_field(self):
-        """
-        Search for a field tile with resource_level>0 owned by me, else public.
-        """
-        # Owned farmland first
         for row in self.world.grid:
             for tile in row:
-                if tile.terrain_type == "field" and tile.resource_level > 0 and tile.owner_id == self.id:
-                    return tile
-        # Then public farmland
+                if tile.terrain_type == "field" and tile.resource_level > 0:
+                    if tile.owner_id == self.id:
+                        return tile
         for row in self.world.grid:
             for tile in row:
                 if tile.terrain_type == "field" and tile.resource_level > 0 and tile.owner_id is None:
@@ -695,22 +578,16 @@ class Villager:
         return None
 
     def find_tile_with_resources(self, terrain_type):
-        """
-        Generic search for tile with terrain_type and resource_level>0.
-        """
         for row in self.world.grid:
             for tile in row:
                 if tile.terrain_type == terrain_type and tile.resource_level > 0:
                     return tile
         return None
 
-    # ---------------------------------------------------------------------
-    #  Recording
-    # ---------------------------------------------------------------------
     def record_stats(self):
         STATS_TIMESERIES.append({
-            "day":        self.world.day_count,
-            "part":       self.world_part_of_day(),
+            "day":         self.world.day_count,
+            "part":        self.world_part_of_day(),
             "villager_id": self.id,
             "role":        self.role,
             "hunger":      self.hunger,
@@ -722,15 +599,11 @@ class Villager:
             "wood":        self.inventory.get("wood", 0)
         })
 
-
 # -------------------------------------------------------------------------
 #  SIMULATION (Headless)
 # -------------------------------------------------------------------------
 
 class Simulation:
-    """
-    Orchestrates the village: creates villagers, steps time, logs results.
-    """
     def __init__(self, config):
         self.config = config
         self.world = World(config)
@@ -756,24 +629,16 @@ class Simulation:
         return villagers
 
     def run(self):
-        """
-        Runs the simulation up to TOTAL_DAYS_TO_RUN * partial-days (3 parts per day).
-        """
         max_days = self.config["TOTAL_DAYS_TO_RUN"]
-
         while self.world.day_count <= max_days:
-            # 1) All villagers do their step
             for v in self.villagers:
                 v.update()
 
-            # 2) World updates resources/events, then time
             self.world.update_resources_and_events()
             self.world.advance_time()
 
-        # At end: export logs and generate charts
         export_log("simulation_log.txt")
         generate_charts("simulation_charts.html")
-
 
 # -------------------------------------------------------------------------
 #  MAIN
