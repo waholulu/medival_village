@@ -3,6 +3,7 @@ import sys
 import plotly.graph_objs as go
 import plotly.offline as pyo
 import pandas as pd
+from collections import Counter
 
 # -------------------------------------------------------------------------
 #  CONFIG & CONSTANTS
@@ -77,8 +78,8 @@ CONFIG = {
     },
 
     # Roles & Number of Villagers
-    "NUM_FARMERS":     1,
-    "NUM_HUNTERS":     1,
+    "NUM_FARMERS":     6,
+    "NUM_HUNTERS":     2,
     "NUM_LOGGERS":     1,
     "NUM_BLACKSMITHS": 1,
 
@@ -107,7 +108,9 @@ CONFIG = {
         "forest": {"chance": 0.3, "base_resource": 5},
         "field":  {"chance": 0.5, "base_resource": 1},
         "water":  {"chance": 0.2, "base_resource": 0}
-    }
+    },
+
+    "MAX_FIELD_RESOURCE": 20,
 }
 
 # -------------------------------------------------------------------------
@@ -218,11 +221,19 @@ class Action:
 
     @staticmethod
     def farm(villager):
-        villager.gain_skill()
         tile = villager.find_owned_or_public_field()
-        if tile is None:
-            return Action.forage(villager)
+        if not tile:
+            Action.forage(villager)
+            return
+            
+        max_field = villager.world.config["MAX_FIELD_RESOURCE"]
+        # Check if field is already maximized
+        if tile.resource_level >= max_field:
+            villager.log("Field already maximized, foraging instead")
+            Action.forage(villager)
+            return
 
+        villager.gain_skill()
         season = villager.world.get_current_season()
         if season == "Autumn":
             # Harvest
@@ -232,6 +243,7 @@ class Action:
                 base_yield=tile.resource_level,  # harvest all
                 fallback_yield=max(1, tile.resource_level // 2)
             )
+            amount = int(amount * villager.skill_level)
             villager.add_resource("food", amount)
             villager.world.log.log_action(
                 villager.world.day_count, villager.world_part_of_day(),
@@ -241,7 +253,12 @@ class Action:
             tile.resource_level = 0
 
         elif season in ["Spring", "Summer"]:
-            tile.resource_level += 2
+            # Add validation to prevent overfilling
+            new_level = min(
+                tile.resource_level + 2,
+                villager.world.config["MAX_FIELD_RESOURCE"]
+            )
+            tile.resource_level = max(0, new_level)  # Prevent negative values
             villager.world.log.log_action(
                 villager.world.day_count, villager.world_part_of_day(),
                 villager.id, villager.role,
@@ -305,14 +322,23 @@ class Action:
     @staticmethod
     def craft(villager):
         villager.gain_skill()
-        mk = villager.world.market
-        tool_list = ["axe", "bow", "hoe"]
-        stocks = {t: mk.stock.get(t, 0) for t in tool_list}
-        least_tool = min(stocks, key=stocks.get)
+        tool_demand = Counter()
+        for v in villager.world.villagers:
+            tools_needed = CONFIG["ROLE_TOOLS"].get(v.role, [])
+            tool_demand.update(tools_needed)
+
+        if tool_demand:
+            least_available_tool = min(
+                tool_demand.keys(),
+                key=lambda t: villager.world.market.stock.get(t, 0)
+            )
+            target_tool = least_available_tool
+        else:
+            target_tool = random.choice(["axe", "bow", "hoe"])
 
         # Need 1 wood to craft
         if villager.get_total_resource("wood") < 1:
-            mk.buy(villager, "wood", 1)
+            villager.world.market.buy(villager, "wood", 1)
 
         if villager.get_total_resource("wood") < 1:
             villager.world.log.log_action(
@@ -323,12 +349,12 @@ class Action:
             return
 
         villager.remove_resource("wood", 1)
-        villager.add_tool(least_tool, 1)
-        mk.sell(villager, least_tool, 1)
+        villager.add_tool(target_tool, 1)
+        villager.world.market.sell(villager, target_tool, 1)
         villager.world.log.log_action(
             villager.world.day_count, villager.world_part_of_day(),
             villager.id, villager.role,
-            f"Crafted & sold 1 {least_tool} (consumed 1 wood)."
+            f"Crafted & sold 1 {target_tool} (consumed 1 wood)."
         )
 
     @staticmethod
@@ -348,9 +374,10 @@ class Action:
         """
         if villager.get_tool_count(tool_name) > 0:
             villager.degrade_tool(tool_name)
-            return base_yield
+            # Apply skill multiplier to both base and fallback
+            return int(base_yield * villager.skill_level)
         else:
-            return fallback_yield
+            return int(fallback_yield * villager.skill_level)
 
 
 # -------------------------------------------------------------------------
@@ -743,18 +770,22 @@ class Villager:
         return len([i for i in lst if i.is_tool()])
 
     def degrade_tool(self, tool_name):
-        lst = self.items.get(tool_name, [])
-        if not lst:
-            return
-        first_tool = lst[0]
-        if first_tool.is_tool():
-            base_degradation = 1
-            skill_reduction = self.skill_level * self.world.config["MIN_TOOL_DURABILITY_BONUS"]
-            final_degradation = max(0.2, base_degradation - skill_reduction)
-            first_tool.durability -= final_degradation
-            if first_tool.durability <= 0:
-                lst.pop(0)
-                self.log(f"{tool_name} broke (durability=0).")
+        for item in self.items.get(tool_name, []):
+            if item.name == tool_name and item.is_tool():
+                item.durability -= 1
+                if item.durability == 1:  # Warn before breaking
+                    self.world.log.log_action(
+                        self.world.day_count, self.world_part_of_day(),
+                        self.id, self.role,
+                        f"{tool_name} is about to break! (1 use left)"
+                    )
+                if item.durability <= 0:
+                    self.world.log.log_action(
+                        self.world.day_count, self.world_part_of_day(),
+                        self.id, self.role,
+                        f"{tool_name} broke! Durability expired."
+                    )
+                break
 
     # ---------------------------------------------------------------------
     #  Resources
@@ -813,7 +844,7 @@ class Villager:
         # Try to find a field owned by this villager
         for row in self.world.grid:
             for tile in row:
-                if tile.terrain_type == "field" and tile.resource_level > 0:
+                if tile.terrain_type == "field" and tile.resource_level >= 0:
                     if tile.owner_id == self.id:
                         return tile
         # Otherwise find any unowned field
