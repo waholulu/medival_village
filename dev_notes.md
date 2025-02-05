@@ -83,3 +83,24 @@ Major changes and additions:
    - Added safeguards for health checks in social interactions
 
 These changes significantly enhance the simulation's complexity and realism, adding new dynamics to the village life simulation 
+
+## Updates since last git push
+
+### Simulation.py Change Summary (Refactored on 2024-03-XX)
+- **Marriage System Integration**:  
+  - Introduced a new `_check_for_marriages` method in the `Simulation` class.
+  - This method is now called during the Morning cycle so that villagers meeting the health, hunger, food, and wood thresholds (as set in the configuration) can get married. Marriage events are logged as part of the simulation's social dynamics.
+
+- **Daily Summary Logging Enhancement**:  
+  - Modified the simulation loop to invoke `log_daily_summary()` for each villager during the Night phase.
+  - This addition provides more granular end-of-day statistics by recording hunger, rest, health, happiness, coins, and inventory details at the close of each simulated day.
+
+- **Improved Action and Statistics Recording**:  
+  - Adjusted the simulation loop within the `run()` method to record villager statistics immediately after each action.
+  - This update ensures that the time-series data feeding the Plotly charts is more accurate and reflects the precise state of each villager throughout the simulation.
+
+- **Refined Time Advancement and Resource Updates**:  
+  - Reorganized the order of operations in the simulation loop: environmental resources are updated and events are processed at the end of each part-of-day cycle before advancing the time.
+  - This results in a smoother simulation cycle and more consistent triggering of events.
+
+*These changes collectively enhance the simulation realism, improve logging fidelity, and provide better support for social dynamics among villagers.* 

@@ -1,0 +1,65 @@
+Below is one example of how you might “tweak” the simulation’s parameters to address what appears to be an overly harsh winter and food‐shortage scenario. In our analysis, we observed that:
+
+Excessive “cold” penalties and wood shortages:
+Many log messages read “No wood ⇒ suffered cold (health & happiness –1)” and soon “perished from poor health.” This indicates that the amount of wood needed for winter warmth (or the penalty when wood is missing) is too severe.
+Food production vs. consumption imbalance:
+Many “Field at max resource, foraging instead” messages suggest that fields quickly hit their maximum capacity, but villagers are still forced to forage instead of “farming” (or harvesting from fields) to generate surplus food. This, combined with the high hunger decrement or low yield, leads to prolonged hunger and, eventually, death.
+Market wood overflow:
+Repeated messages about “Market reached max capacity for wood, overflow of X discarded” indicate that wood is being produced (or stocked) far in excess of what the market can handle. (That in itself is not fatal—but if wood is not “available” for purchase when needed, villagers may miss opportunities to stave off cold.)
+A practical and low‐complexity way to address these issues is to adjust the simulation’s configuration parameters. (Of course, you might also consider altering how villagers choose to acquire or use wood and food, but small parameter changes are a simple first step.)
+
+Below is an example “diff” of changes you might apply in your simulation’s configuration. (Your code may use a dictionary such as CONFIG with various parameters.) In this example, we assume that the original configuration contains parameters such as "WINTER_WOOD_CONSUMPTION", "HUNGER_DECREMENT", "HEALTH_PENALTY_NO_WOOD", "BASE_FARM_YIELD", and a maximum stock for wood in the market under "MARKET_MAX_STOCK". Adjust these values as appropriate for your simulation design.
+
+Before (sample excerpt):
+
+python
+Copy
+CONFIG = {
+    # … other parameters …
+    "WINTER_WOOD_CONSUMPTION": 2,            # wood consumed per winter night
+    "HEALTH_PENALTY_NO_WOOD": 1,             # penalty applied when no wood is available
+    "HUNGER_DECREMENT": 2,                   # hunger lost per day
+    "BASE_FARM_YIELD": 1,                    # base yield from farming a field
+    "MARKET_MAX_STOCK": {
+         "wood": 200,
+         # … other items …
+    },
+    # … other parameters …
+}
+After (proposed changes):
+
+python
+Copy
+CONFIG = {
+    # … other parameters …
+    # Lower the wood consumption in winter so villagers need less wood to stave off cold.
+    "WINTER_WOOD_CONSUMPTION": 1,
+    
+    # Reduce the penalty for having no wood (or apply it less severely).
+    "HEALTH_PENALTY_NO_WOOD": 0.5,
+    
+    # Decrease the daily hunger decrement so that villagers don’t get too hungry too fast.
+    "HUNGER_DECREMENT": 1.5,
+    
+    # Increase the base yield of farming to help generate a modest surplus of food.
+    "BASE_FARM_YIELD": 1.5,
+    
+    # Increase the market’s maximum wood stock so that wood produced isn’t wasted
+    "MARKET_MAX_STOCK": {
+         "wood": 300,   # increased from 200 to 300
+         # … other items remain the same …
+    },
+    # … other parameters …
+}
+Rationale for These Changes
+Reducing winter wood consumption (from 2 to 1) means that villagers will need less wood each winter night. That gives them a better chance to keep their homes warm and avoid the “suffered cold” penalty.
+Reducing the penalty for having no wood (from 1 to 0.5) softens the blow when a villager has a shortfall. If the penalty is applied each night when wood is lacking, lowering it may keep health and happiness from dropping too quickly.
+Decreasing the hunger decrement gives villagers more time before they reach critical hunger levels. In a simulation that runs on a fixed day cycle, even a small change can help many villagers survive a bit longer.
+Raising the base farm yield (from 1 to 1.5) can allow fields to produce a surplus rather than always hitting a “max” state. In many log entries you see fields “at max resource,” meaning that the fields are not used actively for additional harvest. Allowing a bit more yield may help villagers accumulate enough food to eat rather than having to forage.
+Increasing the market’s wood stock limit (from 200 to 300) reduces the frequency of “overflow” messages. This means that more wood produced by loggers will be available for purchase rather than being discarded—even if wood is produced in large amounts, it can now be “stored” in the market and used by villagers in need.
+Final Notes
+These changes are examples based on the log output. In your simulation code, adjust the configuration parameters in the appropriate file or section. Test the simulation for several runs to see whether the mortality rate becomes more reasonable and whether the villagers have a better chance to maintain their health and happiness over time.
+
+By making these adjustments, the simulation should no longer “overkill” the villagers with severe hunger and cold penalties, while still preserving the dynamic resource‐management challenges of the game.
+
+Feel free to tweak the numbers further based on additional test runs and desired simulation behavior.

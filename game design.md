@@ -150,24 +150,31 @@ This simulation models a **small medieval village**. The core elements include:
 - **No** direct manipulation of game state: it listens to simulation updates and renders them.  
 - Optional to enable or disable as needed.
 
----
+### **3.6 Marriage System**
+- Daily morning marriage checks with probability (CONFIG["MARRIAGE_PROBABILITY"])
+- Requirements for marriage candidates:
+  - Relationship status: single
+  - Health > 5
+  - Hunger > 4
+- Married partners track each other via partner_id
+- System events logged with marriage announcements
 
-## **4. Tool Durability**
+### **3.7 Cooked Food System**
+- Conversion ratio: 2 raw food → 1 cooked food
+- Separate item type with different properties:
+  - Higher price (2 vs 1)
+  - Separate inventory tracking
+  - Spoilage system (currently disabled in config)
 
-A **key mechanic** that ensures a steady demand for Blacksmith services and Market transactions:
+### **3.8 Skill Progression**
+- Skill gain per action: 0.15 (CONFIG["SKILL_GAIN_PER_ACTION"])
+- Maximum skill multiplier: 2.0× base efficiency
+- Affects action efficiency but not tool durability
+- Tracked per-role with individual skill levels
 
-- Each tool (`axe`, `bow`, `hoe`) has an integer `durability`.  
-- **Using** a tool (Farming, Hunting, Logging) decreases durability by 1.  
-- **Tool Storage**: Tools are tracked separately from regular inventory with individual durability values
-- **If durability** reaches 0:
-  1. The tool breaks and is removed from the villager's inventory.  
-  2. The villager must **buy** a new tool from the Market or **craft** one if they are a Blacksmith.
+## **4. Implementation Details**
 
----
-
-## **5. Implementation Details**
-
-### **5.1 Villager Behavior**
+### **4.1 Villager Behavior**
 - **Priority Logic**:
   1. Check immediate survival needs (eat if hungry).  
   2. Check for necessary items (tools, winter wood) and **buy** if needed.  
@@ -180,7 +187,7 @@ A **key mechanic** that ensures a steady demand for Blacksmith services and Mark
   - If a role's tool is broken or absent, produce partial yield.  
   - Continue partial yield until a new tool is acquired.
 
-### **5.2 Market Operations**
+### **4.2 Market Operations**
 - **Fixed ITEM_PRICES**: A dictionary managing costs of all items
 - **Tool Transactions**:
   - Tools are handled differently from regular items
@@ -188,9 +195,170 @@ A **key mechanic** that ensures a steady demand for Blacksmith services and Mark
   - Blacksmiths craft the tool type with lowest market stock
   - Requires 1 wood per tool crafted
 
----
+### **4.3 Inventory Management**
+- Stack-based inventory with quantity tracking
+- Automatic cleanup of zero-quantity items
+- Separate handling for tools vs resources:
+  ```python:simulation.py
+  startLine: 865
+  endLine: 879
+  ```
+
+### **4.4 Field Management**
+- Initial field resource level: 5 when assigned
+- Field preparation yields:
+  - Base +6 resources per action with tool
+  - Fallback +1 without tool
+- Maximum field resource cap: 40 (observed in logs)
+
+### **4.5 Winter Handling**
+- Mandatory wood burning during winter nights
+- Cold penalties apply even to incapacitated villagers
+- Minimum wood reserve check before selling surplus
+
+### **4.6 Disease System**
+- 5% daily disease probability (CONFIG["DISEASE_PROBABILITY"])
+- Immediate 2 health point loss
+- Can strike incapacitated villagers
+
+### **4.7 Tool Breakage Flow**
+- Warning system at durability=1
+- Automatic removal of broken tools
+- Fallback yields when tool-less:
+  ```python:simulation.py
+  startLine: 1096
+  endLine: 1109
+  ```
+
+### **4.8 Market Operations**
+- Initial stock quantities:
+  - Tools: 5 each
+  - Food/Wood: 50 each
+  - Cooked food: 0
+- Blacksmith crafting consumes 1 wood per tool
+
+### **4.9 Action Priorities**
+- Updated daily action sequence:
+  1. Morning marriage checks
+  2. Needs fulfillment (eating)
+  3. Tool maintenance
+  4. Role actions
+  5. Surplus selling
+  6. Night/winter handling
+  ```python:simulation.py
+  startLine: 1096
+  endLine: 1109
+  ```
+
+### **4.10 Logging Details**
+- Comprehensive action logging including:
+  - Tool purchases/breakages
+  - Cooking conversions
+  - Disease events
+  - Marriage announcements
+  - Market transactions
+  ```python:simulation.py
+  startLine: 1040
+  endLine: 1046
+  ```
+
+## **5. Config Updates**
+These config parameters need documentation:
+
+```python
+"MARRIAGE_PROBABILITY",  # Currently undefined in shown config
+"SKILL_GAIN_PER_ACTION": 0.15,
+"MAX_SKILL_MULTIPLIER": 2.0,
+"REST_RECOVERY_PER_NIGHT": 4,
+"MIN_WOOD_RESERVE_WINTER": 2
+```
 
 These updates ensure the design document accurately reflects the changes made to the simulation script, particularly regarding the seasonal farming cycle and its implementation.
+
+## **6. Additional Features**
+
+1. **Tool Breakage Warnings**
+   - Tools show "about to break" warnings when durability reaches 1
+   - Full breakage messages appear when durability reaches 0
+   - Broken tools are automatically removed from inventory
+
+2. **Skill Progression System**
+   - Villagers gain 0.3 skill points per action (CONFIG["SKILL_GAIN_PER_ACTION"])
+   - Skill levels provide durability bonus: min 20% bonus to tools (CONFIG["MIN_TOOL_DURABILITY_BONUS"])
+
+3. **Disease System**
+   - 5% daily chance of disease (CONFIG["DISEASE_PROBABILITY"])
+   - Diseases cause 2 health point loss (CONFIG["DISEASE_HEALTH_LOSS"])
+   - Implemented in World event handling
+
+4. **Farmland Initialization**
+   - Fields start with resource_level 5 when assigned
+   - Maximum field resource capped at 20 (CONFIG["MAX_FIELD_RESOURCE"])
+   - Private fields assigned via _assign_farmland_to_farmers() method
+
+5. **Winter Wood Reserves**
+   - Villagers maintain minimum 2 wood reserve in winter (CONFIG["MIN_WOOD_RESERVE_WINTER"])
+   - Affects wood burning priority during winter nights
+
+6. **Inventory Stack Management**
+   - Resources stack in single items with quantity tracking
+   - Tools stored as separate inventory entries with individual durability
+   - Automatic cleanup of zero-quantity resource items
+
+7. **Market Stock Tracking**
+   - Initial tool stocks: 5 each (CONFIG["INITIAL_MARKET_STOCK"])
+   - Food/wood initial stock: 50 each
+   - Blacksmiths craft tools based on lowest market stock
+
+## **7. Updates Required to Design Document**
+
+### **7.1 Marriage System Enhancements (Code Reference)**
+- Marriage candidates require minimum health(>5) and hunger(>4) thresholds
+- Married partners get linked via partner_id
+- Marriage events are logged as system events
+
+### **7.2 Cooked Food Mechanics**
+- Cooked food has different properties from raw food (price=2 vs 1)
+- Cooking conversion ratio: 2 raw food → 1 cooked food
+- Cooked food has separate spoilage handling (disabled in config)
+
+### **7.3 Skill System Implementation**
+- Actual skill gain per action: 0.15 (vs documented 0.3)
+- Max skill multiplier capped at 2.0× base efficiency
+- Skill affects action efficiency but not tool durability
+
+### **7.4 Event System Details**
+- Storm reduces resources by 2 levels in affected tiles
+- Disease causes immediate 2 health point loss
+- Event probabilities: 10% storms, 5% diseases daily
+
+### **7.5 Market Operations**
+- Initial stock quantities:
+  - Tools: 5 each
+  - Food/Wood: 50 each
+  - Cooked food: 0
+- Blacksmiths consume 1 wood per tool crafted
+- Market tracks transaction logs separately from system events
+
+### **7.6 Winter Handling**
+- Wood burning happens automatically if available
+- Cold penalties apply even if villager is incapacitated
+- Minimum wood reserve check happens before selling surplus
+
+### **7.7 Tool Breakage Flow**
+- Broken tools are automatically removed from inventory
+- Villagers continue working with reduced efficiency when tool-less
+- Warning system triggers at durability=1
+
+### **7.8 Field Management**
+- Private fields are assigned via _assign_farmland_to_farmers()
+- Maximum field resource cap: 40 (CONFIG["MAX_FIELD_RESOURCE"])
+- Field preparation yields +6 resources per action with tool
+
+### **7.9 Inventory Management**
+- Automatic selling happens when food/wood >5
+- Cooked food is tracked separately from raw food
+- Tools are stored with individual durability states
 
 
 
