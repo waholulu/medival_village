@@ -1,364 +1,434 @@
-# **Medieval Village Simulation: Final, Unified Design (Revised & Enhanced)**
+# Medieval Village Simulation: Updated & Detailed Design Document
 
-Below is an updated version of the design document, with additional detail to clarify each feature and mechanism—now **including** a seasonal farming cycle in which **harvesting occurs only in Autumn** while other seasons focus on planting and nurturing crops. The goal is to maintain a balanced, cohesive structure without introducing excessive complexity or tight coupling between modules.
-
----
-
-## **1. Introduction**
-
-### **1.1 Overview**
-This simulation models a **small medieval village**. The core elements include:
-
-- **Villagers** with individual needs (hunger, rest, health, happiness) and unique roles (Farmer, Hunter, Logger, Blacksmith).
-- A **Market** with **fixed prices** for essential goods (food, wood, tools).
-- A **tile-based** grid (the **World**) for farmland, forests, and other terrains, each with resource levels.
-- **Weather events** and **short seasons** (3 days per season) that influence resource availability and villager behaviors.
-- **Seasonal Farming Cycle**: Fields are planted/maintained in Spring and Summer, and **harvested only in Autumn**.
-
-### **1.2 Goals**
-1. **Low Coupling**: Keep villager logic, market transactions, and world updates modular.  
-2. **Incremental Complexity**: Start with fundamental survival mechanics, then layer on roles, tool durability, market transactions, special events, and now a **season-based farming cycle**.  
-3. **Sustainability & Fallback**: Provide fallback yields when tools break, encourage villagers to buy or craft new tools, and maintain a stable economy.  
-4. **Transparency**: Enable **detailed logging**, plus optional **charting** (e.g., Plotly) for post-simulation analysis.
+This **design document** describes the full set of features, systems, and data flows in the **Medieval Village Simulation**. It is aligned with the current **Python implementation** that uses a single configuration dictionary (`CONFIG`), along with classes like `World`, `Villager`, `Market`, `EventManager`, and so forth. The simulation is turn-based, advancing in partial-day increments (Morning, Afternoon, Night), while handling resource consumption, tool usage, production activities, weather, disease, combat, and marriage events.
 
 ---
 
-## **2. Key Features & Requirements**
+## 1. Overview
 
-1. **Villager Needs**  
-   - **Hunger**: Gradually depletes; must be satisfied with food or villager health suffers.
-     - Early warning system triggers eating at `HUNGER_WARNING_THRESHOLD` (3) before critical levels
-     - Tracks consecutive partial-days below threshold to determine penalties
-   - **Rest**: Decreases over partial-day cycles; recovers +4 points during night.
-     - Tracks consecutive partial-days below threshold for penalties
-     - Penalties only apply after multiple consecutive low-rest periods
-   - **Health & Happiness**: Influenced by hunger, rest, cold (in winter), and random events.
-     - Takes -1 penalty when needs remain low for consecutive periods
+The simulation’s **main objective** is to model the **daily survival and economic activities** of a small medieval village. Each villager has specific **needs** (hunger, rest, health, happiness) and a **role** (Farmer, Hunter, Logger, Blacksmith). The environment is represented by a **2D grid** of tiles where each tile has terrain (forest, field, water) and a resource level. The simulation aims to explore how villagers interact with **market dynamics**, **tool usage**, **seasons**, and **random events** (storms, disease, monster attacks) to maintain a stable village over a given duration.
 
-2. **Roles & Tools**  
-   - **Farmer**  
-     - Uses a **hoe** for maximum yield on farmland.  
-     - **Seasonal Crop Cycle**:  
-       - **Spring & Summer**: Planting, nurturing, or fertilizing crops (no immediate harvest).  
-       - **Autumn**: **Harvest** occurs only in this season, yielding food based on tile resource levels and farmland preparation.  
-       - **Winter**: Fields are mostly fallow; little to no farming output.  
-   - **Hunter**  
-     - Uses a **bow** to hunt animals in forests for food.  
-   - **Logger**  
-     - Uses an **axe** to gather wood from forests.  
-   - **Blacksmith**  
-     - Consumes wood/ore to **craft** tools, then sells them at the Market.  
-   - **Tool Durability**: Tools have finite durability and need repair or replacement when they break.
+**Key points:**
+1. **Seasonal Cycle**: 3 days per season (Spring, Summer, Autumn, Winter), repeated.
+2. **Time Step**: Each day has 3 parts (Morning, Afternoon, Night).
+3. **Villager Roles**: Distinct actions for each role, plus fallback (forage) if needed.
+4. **Events**: Random storms, diseases, monsters that affect resource levels or villager health.
+5. **Market**: Villagers buy/sell items (food, wood, tools, herbs, cooked food) to meet daily needs or earn coins.
+6. **Marriage**, **Cooking**, **Tool Repair**, **Skill Progression**, **Spoilage**, **Logging**, and **Chart Visualization** add depth to the simulation.
 
-3. **Market (Fixed Prices)**  
-   - A unified **Market** that buys and sells food, wood, and tools.  
-   - Prices remain **constant** (no dynamic supply-demand changes).  
-   - The Market tracks its own stock of items (stock can be infinite or bounded, depending on the simulation goals).  
-   - Villagers can **buy** if they have enough coins and if the item is in stock; they can always **sell** surplus to the Market.
+---
 
-4. **Farmland Ownership**  
-   - Some tiles are **privately owned** by specific villagers.  
-   - Farmers **prioritize** their owned farmland first, then use public or unowned fields if needed.
-   - The **seasonal** cycle applies equally to both privately owned and public fields:  
-     - **Spring & Summer**: Farmers can spend actions to improve their eventual Autumn harvest yields.  
-     - **Autumn**: Farmers reap the harvest from owned or public fields that they have worked on.
+## 2. Key Features
 
-5. **Short Seasons & Partial-Day Steps**  
-   - Each **season** spans exactly **3 days** (Morning, Afternoon, Night).  
-   - There are **4 seasons**, totaling **12 days** in a year.  
-   - **Winter Requirements**: villagers must **burn wood** at night or suffer health/happiness penalties.  
-   - **Farming Constraint**: The **harvest** only occurs in **Autumn**; farmland actions in Spring and Summer set up the yield potential for that harvest.
+### 2.1 Villager Attributes & Needs
 
-6. **Surplus Resource Selling**  
-   - Villagers automatically sell **excess** resources (e.g., if holding more than 5 food or wood).  
-   - This prevents resource hoarding and maintains a flow of goods in the Market.
+Each villager tracks:
+- **Hunger** (`status.hunger`):
+  - Default initial value: 10.
+  - Depletes by `HUNGER_DECREMENT_PER_DAY` spread over Morning/Afternoon/Night.
+  - Affects health/happiness if it stays below certain thresholds for multiple partial-days.
 
-7. **Weather & Random Events**  
-   - **Storm System**:
-     - Occurs only during morning periods
-     - Reduces resource levels by 2 in affected tiles
-     - Impacts approximately 25% of the map tiles
-     - 10% chance of storm each morning
-   - Additional events (e.g., pest infestations, droughts) can be integrated to impact farmland or forest resources.  
-   - **Crop-Specific Weather Impact**: Spring or Summer storms or droughts may reduce the eventual Autumn harvest if farmland resource levels drop.
+- **Rest** (`status.rest`):
+  - Default initial value: 10.
+  - Depletes by `REST_DECREMENT_PER_DAY` daily, recovers by `REST_RECOVERY_PER_NIGHT` each Night.
+  - Low rest over multiple parts of the day leads to health/happiness penalties.
 
+- **Health** (`status.health`):
+  - Default initial value: 80. Capped at `MAX_HEALTH` = 100.
+  - Decreases from starvation, cold weather (no wood in Winter), disease, monster attacks, or extended low rest/hunger.
+  - Increases slightly overnight (`NIGHT_HEALTH_RECOVERY`) if alive and not severely cold.
 
-8. **Simulation & Logging**  
-   - **Core** simulation (headless) updates villagers, the world, and the market each partial-day cycle.  
-   - **Logs** record each villager's actions, transactions, tool usage, resource changes, and random events.  
-   - Optional **plotting** (Plotly) at the simulation's end to visualize resources, villager status, and key metrics over time.
+- **Happiness** (`status.happiness`):
+  - Default initial value: 10.
+  - Decreases if hunger or rest are consistently low, if cold in winter nights (no wood), or if health is critically low.
+  - Kept above zero if basic needs are met and negative events are avoided.
 
-## **3. Architecture**
+- **Coins**:
+  - Used to buy supplies from the Market.
+  - Earned by selling surplus items or crafting/selling tools.
 
-### **3.1 World**
-- **Grid Structure**: 2D array of `Tile` objects, each storing:
-  - `terrain_type` (e.g., `forest`, `field`, `water`)  
-  - `resource_level` (how much wood or food can be gathered)  
-  - `owner_id` (which villager owns the tile, if any)
-- **Market**: Embedded `Market` instance managing:
-  - **Fixed** `ITEM_PRICES` for food, wood, and tools.  
-  - **Stock** availability for items.  
-  - Buy/sell transactions with villagers.
-- **Time & Seasons**:
-  - Each day has **3 parts** (Morning, Afternoon, Night).  
-  - Each partial-day tick, the simulation updates villager needs and performs role-specific actions.  
-  - **Season Changes**: every 3 days triggers a new season, with winter requiring wood consumption and autumn enabling farmland harvests.
-- **Weather & Events**:
-  - **Random storms**: chance to reduce `resource_level` on certain tiles each day or each partial-day.  
-  - Extendable with other events (drought, flood, pest), which can specifically target farmland growth in spring/summer.
+- **Inventory**: 
+  - **Resources**: A dictionary `{ item_name: quantity }` (e.g., `"food": 5, "wood": 2, "cooked_food": 1, "herb": 0 }`.
+  - **Tools**: A dictionary `{ tool_name: [Item, Item, ...] }`, where each `Item` represents a single tool with individual **durability**.
 
-### **3.2 Villager**
-- **Attributes**: `hunger`, `rest`, `health`, `happiness`, plus `inventory` (food, wood, coins) and `tools` (each with a `durability`).  
-- **Role**: Farmer, Hunter, Logger, or Blacksmith.  
-- **Actions** (in typical daily order):
-  1. **Eat**: If hunger is below a threshold, consume food from inventory (if available).  
-  2. **Buy Essentials**: If needed tool is missing/broken or if short on wood during winter, attempt to buy from Market.  
-  3. **Role Action**: (Farm/Hunt/Log/Craft) during Morning/Afternoon.  
-     - **Farming**:  
-       - **Spring & Summer**: Tending crops, incrementally raising `resource_level` on farmland for the upcoming Autumn harvest.  
-       - **Autumn**: Actually **harvest** the crops, collecting food resources based on farmland `resource_level`.  
-       - **Winter**: Minimal farm activity; might do other tasks or just rest.  
-     - **Hunting**: Searching forests for food.  
-     - **Logging**: Gathering wood from forest tiles.  
-     - **Crafting**: Blacksmith forging tools, consuming wood/ore.  
-     - If the correct tool is available, produce maximum yield or get maximum effect.  
-     - If the tool is broken or missing, produce a reduced "fallback" yield/effect.  
-     - Reduce tool durability by 1 if used.  
-  4. **Sell Surplus**: If inventory for food/wood exceeds a threshold (e.g., >5).  
-  5. **Night & Winter**: Burn wood if it's winter and night to avoid health/happiness penalties.  
-  6. **Update Status**: Decrement hunger/rest, log actions, handle health/happiness changes based on events or resource availability.
+- **Skill Level** (`skill_level`):
+  - Starts at 1.0. Each role-related action (farm/hunt/log/craft) grants `SKILL_GAIN_PER_ACTION` (0.05).
+  - Productivity or yields are adjusted by `min(skill_level, (MAX_SKILL_MULTIPLIER - 1))`.
 
-### **3.3 Simulation**
-- **Master Loop**: 
-  - Moves through partial-day cycles (Morning, Afternoon, Night).  
-  - For each villager, calls their `update()` method to handle daily actions.  
-  - Updates the **World** for resource regeneration or depletion, triggers weather events, and changes seasons.  
-- **Stop Condition**: runs until a specified day limit (e.g., 36 days = 3 years), or until all villagers die, or until a user-controlled exit condition.
+- **Relationship Status**:
+  - Either `"single"` or `"married"`.
+  - If married, stores a `partner_id`.
 
-### **3.4 Logging & Plotting**
-- **Logging**:  
-  - Each partial-day step records villager actions, Market buys/sells, storms, tool breakages.  
-  - Optionally print to console or store in a text file for later review.
-- **Plotting** (Optional, e.g., Plotly):  
-  - At the simulation's end, generate charts that visualize:  
-    - Villager hunger/health/coins over time.  
-    - Resource availability across the grid (e.g., average wood in forests, farmland levels).  
-    - Market stock levels (if relevant).
+### 2.2 Roles and Their Actions
 
-### **3.5 Pygame (View Layer)**
-- Purely **visual**: Draws the tile map, villagers, and basic stats (day number, season, partial-day indicator).  
-- **No** direct manipulation of game state: it listens to simulation updates and renders them.  
-- Optional to enable or disable as needed.
+1. **Farmer**  
+   - Primary tool: **hoe**.  
+   - **Spring & Summer**: Increases resource level of farmland tiles (planting/maintenance).  
+   - **Autumn**: Harvests farmland tiles. The entire resource level of the tile is converted into food. The tile’s resource becomes 0 (or partially depleted).  
+   - **Winter**: Farmland resources degrade, minimal farming yield. May do fallback foraging.
 
-### **3.6 Marriage System**
-- Daily morning marriage checks with probability (CONFIG["MARRIAGE_PROBABILITY"])
-- Requirements for marriage candidates:
-  - Relationship status: single
-  - Health > 5
-  - Hunger > 4
-- Married partners track each other via partner_id
-- System events logged with marriage announcements
+2. **Hunter**  
+   - Primary tool: **bow**.  
+   - Hunts in **forest** tiles for food, reducing tile resource level.  
+   - Yields are typically smaller than a full farm harvest, but consistent across seasons.
 
-### **3.7 Cooked Food System**
-- Conversion ratio: 2 raw food → 1 cooked food
-- Separate item type with different properties:
-  - Higher price (2 vs 1)
-  - Separate inventory tracking
-  - Spoilage system (currently disabled in config)
+3. **Logger**  
+   - Primary tool: **axe**.  
+   - Cuts wood in forest tiles, reducing the tile’s resource level by a configured amount (`LOGWOOD_RESOURCE_DECREASE`).  
+   - Gathers wood for personal or Market use, crucial in winter for heating.
 
-### **3.8 Skill Progression**
-- Skill gain per action: 0.15 (CONFIG["SKILL_GAIN_PER_ACTION"])
-- Maximum skill multiplier: 2.0× base efficiency
-- Affects action efficiency but not tool durability
-- Tracked per-role with individual skill levels
+4. **Blacksmith**  
+   - No required primary tool to operate, but may fix or craft any tool.  
+   - Repairs villagers’ broken or damaged tools if enough **wood** is available in the Market.  
+   - Crafts new tools if Market stock is low, then sells them for coins.  
+   - If no crafting or repairs are needed, may do fallback actions (forage).
 
-## **4. Implementation Details**
+5. **Fallback: Forage**  
+   - If a villager cannot perform their role action (e.g., no farmland or no forest resources), they gather a small amount of food from the environment (`FORAGE_FOOD_GAIN`).
 
-### **4.1 Villager Behavior**
-- **Priority Logic**:
-  1. Check immediate survival needs (eat if hungry).  
-  2. Check for necessary items (tools, winter wood) and **buy** if needed.  
-  3. Execute **role action** (farm, hunt, log, craft).  
-     - **Farm** in Spring/Summer to raise resource levels, then **harvest** in Autumn.  
-     - Reduce durability of the relevant tool if used.  
-  4. **Sell Surplus** if inventory is too large.  
-  5. **At night in winter**, burn wood if possible; else penalize health/happiness.  
-- **Fallback**:  
-  - If a role's tool is broken or absent, produce partial yield.  
-  - Continue partial yield until a new tool is acquired.
+### 2.3 The Market
 
-### **4.2 Market Operations**
-- **Fixed ITEM_PRICES**: A dictionary managing costs of all items
-- **Tool Transactions**:
-  - Tools are handled differently from regular items
-  - Each new tool starts with full durability
-  - Blacksmiths craft the tool type with lowest market stock
-  - Requires 1 wood per tool crafted
+- Holds an internal `stock` dictionary `{ item_name: quantity }`.
+- **Prices** come from `CONFIG["ITEMS"][item_name]["price"]`.
+- If stock exceeds `MARKET_MAX_STOCK[item_name]`, the price is multiplied by `MARKET_PRICE_DECAY` (e.g., 0.95).
+- **Buy**:  
+  - Villager attempts to buy an item. If enough stock and villager has enough coins, the transaction proceeds.  
+  - Market reduces its stock, villager gains the item. Villager’s coin count decreases by `price * quantity`.
+- **Sell**:  
+  - Villager sells an item if they have surplus.  
+  - Market’s stock increases, villager’s inventory decreases. Villager’s coins increase by `price * quantity`.
 
-### **4.3 Inventory Management**
-- Stack-based inventory with quantity tracking
-- Automatic cleanup of zero-quantity items
-- Separate handling for tools vs resources:
-  ```python:simulation.py
-  startLine: 865
-  endLine: 879
-  ```
+### 2.4 Seasonal Cycle
 
-### **4.4 Field Management**
-- Initial field resource level: 5 when assigned
-- Field preparation yields:
-  - Base +6 resources per action with tool
-  - Fallback +1 without tool
-- Maximum field resource cap: 40 (observed in logs)
+- **Seasons** = `[Spring, Summer, Autumn, Winter]`, each lasting 3 days.
+- **Spring & Summer**:
+  - Farmers increase farmland resource levels for a future harvest.
+  - Forests regrow slightly at night.
+- **Autumn**:
+  - Farmers harvest farmland, gaining food.
+- **Winter**:
+  - Farmland resource levels shrink by `WINTER_FIELD_LOSS`.
+  - **Wood** is consumed each Night (`WINTER_WOOD_CONSUMPTION`) to keep villagers warm.
+  - If no wood is available, villagers lose health and happiness from cold.
 
-### **4.5 Winter Handling**
-- Mandatory wood burning during winter nights
-- Cold penalties apply even to incapacitated villagers
-- Minimum wood reserve check before selling surplus
+### 2.5 Events & Random Hazards
 
-### **4.6 Disease System**
-- 5% daily disease probability (CONFIG["DISEASE_PROBABILITY"])
-- Immediate 2 health point loss
-- Can strike incapacitated villagers
+1. **Storms** (`STORM_PROBABILITY`=0.1):
+   - Occur in Morning.  
+   - Randomly affects around `(width * height) / STORM_AFFECTED_TILE_DIVISOR` tiles, each losing `STORM_RESOURCE_REDUCTION` resource levels.
 
-### **4.7 Tool Breakage Flow**
-- Warning system at durability=1
-- Automatic removal of broken tools
-- Fallback yields when tool-less:
-  ```python:simulation.py
-  startLine: 1096
-  endLine: 1109
-  ```
+2. **Disease** (`DISEASE_PROBABILITY`=0.05):
+   - Random villager suffers `DISEASE_HEALTH_LOSS` (2) health damage.
 
-### **4.8 Market Operations**
-- Initial stock quantities:
-  - Tools: 5 each
-  - Food/Wood: 50 each
-  - Cooked food: 0
-- Blacksmith crafting consumes 1 wood per tool
+3. **Monster Attacks** (`MONSTER_SPAWN_PROB`=0.05):
+   - Spawns a **Monster** (Wolf, Bear, Goblin) with random health/damage (within config ranges).  
+   - Immediately attacks a random villager in up to `COMBAT_MAX_ROUNDS` of combat.  
+   - Villager’s health decreases per monster damage roll; monster can die or remain alive (though typically removed if it flees or is killed).
 
-### **4.9 Action Priorities**
-- Updated daily action sequence:
-  1. Morning marriage checks
-  2. Needs fulfillment (eating)
-  3. Tool maintenance
-  4. Role actions
-  5. Surplus selling
-  6. Night/winter handling
-  ```python:simulation.py
-  startLine: 1096
-  endLine: 1109
-  ```
+### 2.6 Cooking & Herbs
 
-### **4.10 Logging Details**
-- Comprehensive action logging including:
-  - Tool purchases/breakages
-  - Cooking conversions
-  - Disease events
-  - Marriage announcements
-  - Market transactions
-  ```python:simulation.py
-  startLine: 1040
-  endLine: 1046
-  ```
+- **Cooking**:
+  - Converts a certain quantity of raw food into **cooked_food** (`COOKING_CONVERSION_RATE`=1).  
+  - Cooked food is more beneficial (+3 hunger, +2 health in emergency, higher market price).  
+  - Villager performs cooking if they have extra raw food and a high enough probability (`COOKING_PROBABILITY`=0.9).
 
-## **5. Config Updates**
-These config parameters need documentation:
+- **Herbs**:
+  - If health is critically low, a villager may consume an herb (`HERB_HEALTH_BOOST`=4).
+  - Herbs can be bought from or sold to the Market if available.
 
-```python
-"MARRIAGE_PROBABILITY",  # Currently undefined in shown config
-"SKILL_GAIN_PER_ACTION": 0.15,
-"MAX_SKILL_MULTIPLIER": 2.0,
-"REST_RECOVERY_PER_NIGHT": 4,
-"MIN_WOOD_RESERVE_WINTER": 2
-```
+### 2.7 Marriage
 
-These updates ensure the design document accurately reflects the changes made to the simulation script, particularly regarding the seasonal farming cycle and its implementation.
+- Each morning, there is a `MARRIAGE_PROBABILITY` chance to check for potential marriages:
+  - Among single villagers with adequate thresholds:
+    - `health` > `MARRIAGE_HEALTH_THRESHOLD`
+    - `hunger` > `MARRIAGE_HUNGER_THRESHOLD`
+    - `get_item_count("food")` > `MARRIAGE_FOOD_THRESHOLD`
+    - `get_item_count("wood")` > `MARRIAGE_WOOD_THRESHOLD`
+  - Pairs up two random qualifying singles. Both become `relationship_status = "married"`, each storing the other’s `partner_id`.
 
-## **6. Additional Features**
+### 2.8 Tool System
 
-1. **Tool Breakage Warnings**
-   - Tools show "about to break" warnings when durability reaches 1
-   - Full breakage messages appear when durability reaches 0
-   - Broken tools are automatically removed from inventory
+- **Durability**:
+  - Each tool item has a fixed max durability.  
+  - Using it for its intended action (farming with a hoe, hunting with a bow, logging with an axe) reduces durability by 1.  
+  - If durability hits 0, the tool breaks and is removed from inventory.  
+  - A warning logs when a tool hits durability=1.
 
-2. **Skill Progression System**
-   - Villagers gain 0.3 skill points per action (CONFIG["SKILL_GAIN_PER_ACTION"])
-   - Skill levels provide durability bonus: min 20% bonus to tools (CONFIG["MIN_TOOL_DURABILITY_BONUS"])
+- **Repair**:
+  - Blacksmiths can repair a damaged tool if there is enough wood in the Market to cover `TOOL_REPAIR_WOOD` * (missing durability).  
+  - On repair, the tool is fully restored to max durability.
 
-3. **Disease System**
-   - 5% daily chance of disease (CONFIG["DISEASE_PROBABILITY"])
-   - Diseases cause 2 health point loss (CONFIG["DISEASE_HEALTH_LOSS"])
-   - Implemented in World event handling
+- **Fallback Yield**:
+  - If the correct tool is missing or broken, actions yield a reduced amount (`FALLBACK_FARM_YIELD`, `FALLBACK_LOG_YIELD`, etc.).
 
-4. **Farmland Initialization**
-   - Fields start with resource_level 5 when assigned
-   - Maximum field resource capped at 20 (CONFIG["MAX_FIELD_RESOURCE"])
-   - Private fields assigned via _assign_farmland_to_farmers() method
+### 2.9 Surplus & Safety Stock
 
-5. **Winter Wood Reserves**
-   - Villagers maintain minimum 2 wood reserve in winter (CONFIG["MIN_WOOD_RESERVE_WINTER"])
-   - Affects wood burning priority during winter nights
+- **Surplus Thresholds** (`SURPLUS_THRESHOLDS`):
+  - E.g., if a villager has more than 10 food, they may sell the excess automatically.  
+  - Encourages a steady flow of goods to and from the Market.
 
-6. **Inventory Stack Management**
-   - Resources stack in single items with quantity tracking
-   - Tools stored as separate inventory entries with individual durability
-   - Automatic cleanup of zero-quantity resource items
+- **Winter Reserve**:
+  - If it’s winter, villagers try to keep a minimum amount of wood (`MIN_WOOD_RESERVE_WINTER`) for heating at night before selling any surplus.
 
-7. **Market Stock Tracking**
-   - Initial tool stocks: 5 each (CONFIG["INITIAL_MARKET_STOCK"])
-   - Food/wood initial stock: 50 each
-   - Blacksmiths craft tools based on lowest market stock
+### 2.10 Spoilage
 
-## **7. Updates Required to Design Document**
+- Some items may have a nonzero `spoilage` rate.  
+- If `(current_tick % spoilage_rate) == 0`, the item spoils and is discarded entirely.  
+- By default, `food` and `herb` have spoilage = 0, so it’s effectively disabled.
 
-### **7.1 Marriage System Enhancements (Code Reference)**
-- Marriage candidates require minimum health(>5) and hunger(>4) thresholds
-- Married partners get linked via partner_id
-- Marriage events are logged as system events
+---
 
-### **7.2 Cooked Food Mechanics**
-- Cooked food has different properties from raw food (price=2 vs 1)
-- Cooking conversion ratio: 2 raw food → 1 cooked food
-- Cooked food has separate spoilage handling (disabled in config)
+## 3. Class Architecture
 
-### **7.3 Skill System Implementation**
-- Actual skill gain per action: 0.15 (vs documented 0.3)
-- Max skill multiplier capped at 2.0× base efficiency
-- Skill affects action efficiency but not tool durability
+### 3.1 `Simulation`
 
-### **7.4 Event System Details**
-- Storm reduces resources by 2 levels in affected tiles
-- Disease causes immediate 2 health point loss
-- Event probabilities: 10% storms, 5% diseases daily
+- **Attributes**:  
+  - `config`: The master `CONFIG` dictionary.  
+  - `sim_log`: An instance of `SimulationLog` for recording events/actions.  
+  - `stats_collector`: A `StatsCollector` that captures villager status over time.  
+  - `world`: A `World` instance containing all tiles, Market, EventManager, and day/time tracking.
 
-### **7.5 Market Operations**
-- Initial stock quantities:
-  - Tools: 5 each
-  - Food/Wood: 50 each
-  - Cooked food: 0
-- Blacksmiths consume 1 wood per tool crafted
-- Market tracks transaction logs separately from system events
+- **Methods**:
+  - `__init__()`: Initializes the World and spawns villagers.  
+  - `run()`: Main loop over `TOTAL_DAYS_TO_RUN`, dividing each day into 3 parts:
+    1. Morning: Possibly handle marriages, daily events, have villagers act.
+    2. Afternoon: Villagers act again.  
+    3. Night: Villagers rest, burn wood if winter, then gather final stats.  
+  - After finishing, exports logs and generates charts.
 
-### **7.6 Winter Handling**
-- Wood burning happens automatically if available
-- Cold penalties apply even if villager is incapacitated
-- Minimum wood reserve check happens before selling surplus
+### 3.2 `World`
 
-### **7.7 Tool Breakage Flow**
-- Broken tools are automatically removed from inventory
-- Villagers continue working with reduced efficiency when tool-less
-- Warning system triggers at durability=1
+- **Attributes**:
+  - `config`: Shared dictionary of parameters.
+  - `width`, `height`: Grid size from config.  
+  - `grid`: 2D array of `Tile`s.  
+  - `market`: A `Market` instance.  
+  - `event_manager`: An `EventManager` instance.
+  - `day_count`: The current simulation day (starting at 1).
+  - `part_of_day_index`: 0 (Morning), 1 (Afternoon), or 2 (Night).
+  - `villagers`: A list of all villager objects.
+  - `monsters`: Any active monsters in the world (added if a monster spawns).
 
-### **7.8 Field Management**
-- Private fields are assigned via _assign_farmland_to_farmers()
-- Maximum field resource cap: 40 (CONFIG["MAX_FIELD_RESOURCE"])
-- Field preparation yields +6 resources per action with tool
+- **Key Methods**:
+  - `_generate_tiles()`: Creates the grid based on `TERRAIN_DISTRIBUTION`.  
+  - `update_resources_and_events(part_of_day)`:  
+    - If `Morning`, triggers event checks (storm/disease/monsters).  
+    - If `Night`, regenerates some forest resources.  
+    - Removes dead villagers from the list if health ≤ 0.
+  - `advance_time()`: Moves to next partial day or increments the day count if moving from Night to the next Morning.
+  - `get_current_season()`: Derives the season from `(day_count - 1) // DAYS_PER_SEASON`.
+  - `is_winter()`: Checks if the current season is `"Winter"`.
 
-### **7.9 Inventory Management**
-- Automatic selling happens when food/wood >5
-- Cooked food is tracked separately from raw food
-- Tools are stored with individual durability states
+### 3.3 `EventManager`
 
+- **Methods**:
+  - `handle_morning_events(world)`:  
+    1. Check for storm probability; reduce tile resources.  
+    2. Check for disease probability; inflict damage on a random villager.  
+    3. Check for monster spawn probability; spawn and attack.  
+  - `trigger_storm(world)`, `trigger_disease(world)`, `trigger_monster_attack(world)`: detailed subroutines.
 
+### 3.4 `Villager`
 
+- **Attributes**: `id`, `role`, `world`, `status`, `coins`, `skill_level`, `relationship_status`, `partner_id`, `inventory`.
+- **Methods**:
+  - **Daily Cycle**:
+    - `perform_part_of_day(part_of_day)`: Delegates to `handle_morning()`, `handle_afternoon()`, or `handle_night()`.
+  - **Morning**:
+    - Attempt **emergency_recover** if health is very low.
+    - **eat_if_needed**, **buy_essential_items**, **buy_primary_tool**, then role action via `RoleManager.do_role_action(villager)`.
+    - Optionally cook food if raw food > `RAW_FOOD_SAFETY`.
+    - Use an herb if health < `USE_HERB_HEALTH_THRESHOLD`.
+  - **Afternoon**:
+    - Repeat role action or fallback if needed, then attempt to **sell_surplus**.
+  - **Night**:
+    - If winter, call `consume_wood_at_night()`.
+    - Recover health partially, update hunger/rest.  
+  - **Role Actions** (farm/hunt/log_wood/craft/forage) are in `Action` class.  
+  - **Inventory Helpers**: `add_item`, `remove_item`, `get_item_count`, `degrade_item`.  
+  - **Spoilage**: `update_spoilage()` checks whether resources spoil based on current tick vs. item spoilage rate.
+  - **Logging**: `log(message)` convenience method.
+
+### 3.5 `Action` Utility Class
+
+- `farm(villager)`, `hunt(villager)`, `log_wood(villager)`, `craft(villager)`, `forage(villager)`, `cook_food(villager)`, etc.  
+- Implements logic such as **yield** calculations, tool usage/durability reduction, fallback to foraging, logging messages, etc.
+- **Season-Specific** logic in `farm(villager)`:
+  - Spring/Summer: Increase farmland resource up to `MAX_FIELD_RESOURCE`.  
+  - Autumn: Harvest farmland fully, converting the tile’s `resource_level` to food.  
+  - Winter: Field resources degrade; fallback forage.
+
+### 3.6 `Market`
+
+- **Attributes**: `stock` (dict), `config`, `log` (shared `SimulationLog`).
+- **Buy/Sell** flow:
+  - `_attempt_transaction(item_name, qty, is_buy=True)`: Internal logic for checking stock or computing cost.  
+  - `attempt_buy(item_name, qty)`: Returns `(success, total_cost, actual_qty)`.
+  - `finalize_buy(item_name, qty)`: Deduct from stock.  
+  - `attempt_sell(item_name, qty)`: Returns `(success, revenue, actual_qty)`.
+  - `finalize_sell(item_name, qty)`: Increase stock, discard overflow if maxed out.  
+  - `get_price(item_name)`: Base price with optional decay.  
+  - `log_purchase(villager, item_name, qty)`, `log_sale(villager, item_name, qty, revenue)`: records transactions.
+
+### 3.7 Logging & Charting
+
+1. **SimulationLog**:
+   - Stores a list of `(day, part, villager_id, role, message)` tuples.
+   - `export_log(filename)`: Writes lines sorted by `(day, villager_id)`.
+     - Day 0 is used for system-level or market messages if needed.
+
+2. **StatsCollector**:
+   - Gathers each villager’s stats after their part-of-day action:
+     - Hunger, rest, health, happiness, coins, counts of key items.
+   - `generate_charts(filename)`:  
+     - Builds multi-plot charts using Plotly:
+       - Individual lines for hunger, health, happiness over time.
+       - Averages by role for coins, health, and happiness.
+       - Seasonal lines (dotted vertical lines) marking season changes.
+     - Embeds the simulation log in an HTML with a filterable log box.
+
+---
+
+## 4. Core Simulation Flow
+
+Below is a **high-level** pseudocode structure showing how the simulation progresses each day:
+
+Initialize Simulation(config): world = World(config) villagers = spawnVillagers() # Create roles as per config world.villagers = villagersday_count = 1 while day_count <= config["TOTAL_DAYS_TO_RUN"]: for part in ["Morning", "Afternoon", "Night"]: if part == "Morning": # Check marriage, handle weather/disease/monsters simulation.check_for_marriages() eventManager.handle_morning_events(world)
+yaml
+Copy
+    # Each villager acts
+    for villager in world.villagers:
+        villager.perform_part_of_day(part)
+
+    # If this part is Night, log daily summary for each villager
+    if part == "Night":
+        for villager in world.villagers:
+            villager.log_daily_summary()
+
+    # Update environment, remove dead villagers, regrow resources if needed
+    world.update_resources_and_events(part)
+
+    # Advance time
+    world.advance_time()  # increments part_of_day_index or day_count
+Finalize: sim_log.export_log("simulation_log.txt") stats_collector.generate_charts("simulation_charts.html")
+markdown
+Copy
+
+---
+
+## 5. Extended Details and Additional Mechanics
+
+1. **Emergency Recovery**:
+   - If health is below `EMERGENCY_HEALTH_THRESHOLD` (5), villager tries to:
+     - Cook food if possible and eat it for a health boost, OR
+     - Buy and use an herb if no food is available.
+   - Logged as emergency actions in the simulation log.
+
+2. **Cold Penalty in Winter**:
+   - Each Night in Winter, a villager must burn `WINTER_WOOD_CONSUMPTION` wood if they have it.
+   - If they do not, they lose health and happiness (`NO_WOOD_PENALTY`=0.5).
+
+3. **Combat Flow** (Monster Attack):
+   - A monster with random (health, damage) spawns and selects a random villager.
+   - They trade up to 3 attack rounds:
+     - Villager deals 1–3 damage each round; monster deals 1–(monster.damage).
+     - If the villager’s health hits 0, that villager “dies” (removed from the simulation).
+     - If monster’s health hits 0, it is removed from the world.  
+   - Logged under an “EVENT” role with details.
+
+4. **Spoilage Implementation**:
+   - Each partial day, `villager.update_spoilage()` checks each resource’s spoilage rate.
+   - If `current_tick % spoilage_rate == 0`, the full quantity is discarded.
+   - Default rates are often 0, disabling spoilage.
+
+5. **Marriage Effects** (Future Expansions):
+   - Currently, being “married” does not change daily actions beyond the log.
+   - Potential expansions might let spouses share inventory, or benefit from health/happiness synergy.
+
+6. **Tool Repair vs. Crafting**:
+   - Blacksmith checks each tool in inventory; if it is not at max durability, tries to repair with `TOOL_REPAIR_WOOD`.
+   - If no repairs needed, crafts the tool with greatest shortage in the Market, sells it for coins.
+
+7. **Skill Gain**:
+   - Each role action increments `skill_level` by `SKILL_GAIN_PER_ACTION` (0.05).
+   - Effective yield multiplier for certain actions = `1 + skill_bonus + TOOL_YIELD_BASE`, capped by `max_multiplier` = 3.0 for logging or `MAX_SKILL_MULTIPLIER` for farming/hunting.
+   - Example: Farmer with skill=1.15 → skill_bonus=0.15, plus base=1, plus `TOOL_YIELD_BASE`=1.0 => total=2.15 if allowed by max multiplier.
+
+---
+
+## 6. Configuration Highlights
+
+Below are some **notable** config entries (see code for the full list):
+
+- **Terrain & Field**:
+  - `TERRAIN_DISTRIBUTION`: Probabilities for forest, field, water.
+  - `MAX_FIELD_RESOURCE`=30; farmland cannot exceed this resource level.
+  - `WINTER_FIELD_LOSS`=0.5; farmland resource halves in winter if a farmer attempts to farm it.
+
+- **Items**:
+  - `"food"`, `"cooked_food"`, `"wood"`, `"herb"` as resources with price/spoilage.
+  - `"axe"`, `"bow"`, `"hoe"` as tools, each with defined durability and price.
+
+- **Season & Time**:
+  - `DAYS_PER_SEASON`=3, `SEASONS`=["Spring","Summer","Autumn","Winter"].
+  - `PARTS_OF_DAY`=["Morning","Afternoon","Night"].
+
+- **Roles**:
+  - `NUM_FARMERS`=10, `NUM_HUNTERS`=4, `NUM_LOGGERS`=3, `NUM_BLACKSMITHS`=3.
+  - `ROLE_TOOLS` mapping each role to a preferred tool.
+
+- **Market**:
+  - `MARKET_MAX_STOCK`: Maximum capacity for each item.
+  - `MARKET_PRICE_DECAY`=0.95 if over capacity.
+
+- **Events**:
+  - `STORM_PROBABILITY`=0.1, `DISEASE_PROBABILITY`=0.05, `MONSTER_SPAWN_PROB`=0.05.
+  - `STORM_RESOURCE_REDUCTION`=2, `DISEASE_HEALTH_LOSS`=2.
+
+- **Marriage**:
+  - `MARRIAGE_PROBABILITY`=0.05, thresholds for health/hunger/food/wood.
+
+- **Cooking**:
+  - `COOKING_CONVERSION_RATE`=1 (1 raw food => 1 cooked_food),
+  - `COOKING_PROBABILITY`=0.9.
+
+- **Logging**:
+  - `LOG_FILENAME`="simulation_log.txt", `CHART_FILENAME`="simulation_charts.html".
+
+---
+
+## 7. Simulation Execution & Outputs
+
+1. **Run** the simulation (for example, `python simulation.py`) → it instantiates all objects, spawns villagers, and executes day/part cycles until `TOTAL_DAYS_TO_RUN` is reached.
+2. **Logging**:
+   - Detailed textual logs stored in `simulation_log.txt`:
+     - Day-based lines listing each villager’s events, plus system-level events for storms, diseases, marriages, etc.
+3. **Charts**:
+   - An HTML file `simulation_charts.html` is generated with multiple subplots:
+     - Individual hunger, health, happiness lines per villager.
+     - Average coins/health/happiness by role.
+     - Vertical dotted lines marking season changes.
+   - The final HTML contains a filterable log box and optional UI elements to resize or filter by villager ID.
+
+4. **Possible Extensions** (not fully implemented yet):
+   - **Family Mechanics**: Married villagers pooling resources, or affecting each other’s happiness if one is sick.
+   - **Advanced Pricing**: True supply/demand-based market with price adjustments.
+   - **Additional Resources**: More refined items (iron, stone, etc.), specialized farmland seeds, livestock, etc.
+   - **AI Behavior**: More complex decision-making for trades or tool usage.
+
+---
+
+## 8. Conclusion
+
+This **detailed design** captures the **current state** of the Medieval Village Simulation, reflecting all major code features:
+
+- **Individual villager states** (hunger, rest, health, happiness, skill, marriage).
+- **Role-based production** (Farmer, Hunter, Logger, Blacksmith).
+- **Seasonal farmland** mechanics (plant in Spring/Summer, harvest in Autumn, degrade in Winter).
+- **Random events** (storms, disease, monsters) that challenge survival.
+- **Market system** for buying/selling goods with partial price decay if overstocked.
+- **Marriage system** for pairing villagers with sufficient resources.
+- **Cooking, tool repair, skill progression**, and **spoilage** for deeper realism.
+- **Comprehensive logging** and **Plotly charts** for post-run analysis.
+
+This document ensures all implemented logic is fully described and offers a clear reference for future enhancements or debug
